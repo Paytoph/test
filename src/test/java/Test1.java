@@ -45,10 +45,16 @@ public class Test1 {
         driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
     }
 
-    @Step("Выбрать русский язык")
-    public void switchOverLanguageRus() {
+    @Step("Выбрать английский язык")
+    public void switchOverLanguageEng() {
         driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'English')]")));
+    }
+
+    @Step("Выбрать русский язык")
+    public void switchOverLanguageRus() {
+        driver.findElement(By.xpath("//a[contains(@data-params, 'ru')]/..")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@data-params, 'ru')]/..")));
     }
 
     @Step("активировать все чекбоксы")
@@ -83,21 +89,36 @@ public class Test1 {
 
     @Step("ввести в поле адреса 'кому' емэйл")
     public void sendingMessageTrueEmail() {
-        driver.findElement(By.xpath("//input[@id='nb-17']")).sendKeys("djeeeelik@yandex.ru");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@class='mail-Compose-Field mail-Compose-Field_to js-compose-field-wrapper']//div[@class='mail-Compose-Field-Input']")));
+        driver.findElement(By.xpath("//div[@name='to']")).click();
+        driver.findElement(By.xpath("//div[@name='to']")).sendKeys("djeeeelik@yandex.ru");
+    }
 
+    @Step("нажать на кнопку отправить")
+    public void clickSendMessageButton() {
+        driver.findElement(By.xpath("//button[@id='nb-16']//span[@class='_nb-button-text']")).click();
+    }
+
+
+    @Step("ввести в поле адреса 'кому' случайные символы")
+    public void sendingMessageFalseEmail() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@class='mail-Compose-Field mail-Compose-Field_to js-compose-field-wrapper']//div[@class='mail-Compose-Field-Input']")));
+        driver.findElement(By.xpath("//div[@name='to']")).click();
+        driver.findElement(By.xpath("//div[@name='to']")).sendKeys("qwerty1122");
     }
 
     @Test
-    public void languageRu() {
+    public void languageEng() {
+        clickSettingsButton();
+        openLanguageList();
+        switchOverLanguageEng();
+    }
+
+    @Test
+    public void languageRus() {
         clickSettingsButton();
         openLanguageList();
         switchOverLanguageRus();
-    }
-
-    @Test
-    public void languageEn() {
-        clickSettingsButton();
-        openLanguageList();
     }
 
     @Test
@@ -124,5 +145,19 @@ public class Test1 {
     public void sendTheMessage() {
         clickComposeButton();
         sendingMessageTrueEmail();
+        clickSendMessageButton();
+    }
+
+    @Test
+    public void sendTheMessage2() {
+        clickComposeButton();
+        sendingMessageFalseEmail();
+        clickSendMessageButton();
+    }
+
+    @Test
+    public void sendTheMessage3() {
+        clickComposeButton();
+        clickSendMessageButton();
     }
 }
