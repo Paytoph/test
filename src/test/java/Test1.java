@@ -51,24 +51,43 @@ public class Test1 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'English')]")));
     }
 
-    @Step("Выбрать русский язык")
-    public void switchOverLanguageRus() {
-        driver.findElement(By.xpath("//a[contains(@data-params, 'ru')]/..")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@data-params, 'ru')]/..")));
+
+    @Step("Проверка русского языка")
+    public void switchOverLanguageTestRus() {
+
+        String language = driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).getText();
+        if (language.equals("Русский")) {
+            System.out.println("Готово");
+        } else {
+            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
+            driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
+        }
+    }
+
+    @Step("Проверка английского языка")
+    public void switchOverLanguageTestEng() {
+
+        String language = driver.findElement(By.xpath("//a[contains(text(),'English')]")).getText();
+        if (language.equals("Английский")) {
+            System.out.println("Готово");
+        } else {
+            driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
+            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
+        }
     }
 
     @Step("активировать все чекбоксы")
-    public void deletingMessages() {
+    public void activateCheckboxes() {
         driver.findElements(By.xpath("//label[@data-nb='checkbox']")).forEach(WebElement::click);
     }
 
     @Step("нажать кнопку del на клавиатуре")
-    public void deletingMessagesTestWithoutClick() {
+    public void deletingMessages() {
         driver.findElement(By.xpath("//a[@id='nb-3']")).sendKeys(Keys.DELETE);
     }
 
     @Step("Проверка того,что письма удалились")
-    public void assertDeletingMessages() {
+    public void deletingMessagesTestWithoutClick() {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("/label[@data-nb='checkbox']")));
     }
 
@@ -85,11 +104,12 @@ public class Test1 {
     @Step("клик на кнопку'написать'")
     public void clickComposeButton() {
         driver.findElement(By.xpath("//span[@class='mail-ComposeButton-Text']")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='mail-Compose-From']//button")));
     }
+
 
     @Step("ввести в поле адреса 'кому' емэйл")
     public void sendingMessageTrueEmail() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@class='mail-Compose-Field mail-Compose-Field_to js-compose-field-wrapper']//div[@class='mail-Compose-Field-Input']")));
         driver.findElement(By.xpath("//div[@name='to']")).click();
         driver.findElement(By.xpath("//div[@name='to']")).sendKeys("djeeeelik@yandex.ru");
     }
@@ -102,9 +122,27 @@ public class Test1 {
 
     @Step("ввести в поле адреса 'кому' случайные символы")
     public void sendingMessageFalseEmail() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@class='mail-Compose-Field mail-Compose-Field_to js-compose-field-wrapper']//div[@class='mail-Compose-Field-Input']")));
         driver.findElement(By.xpath("//div[@name='to']")).click();
         driver.findElement(By.xpath("//div[@name='to']")).sendKeys("qwerty1122");
+    }
+
+    @Step("Проверить, что письмо отправилось")
+    public void checkError() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='mail-Done-Title js-title-info']")));
+    }
+
+    @Step("Проверить, что емэйл некорректный")
+    public void checkError2() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
+        String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
+        Assert.assertEquals("Некорректные адреса: qwerty1122", message);
+    }
+
+    @Step("Проверить, что появилась ошибка")
+    public void checkError3() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
+        String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
+        Assert.assertEquals("Поле не заполнено. Необходимо ввести адрес.", message);
     }
 
     @Test
@@ -118,21 +156,22 @@ public class Test1 {
     public void languageRus() {
         clickSettingsButton();
         openLanguageList();
-        switchOverLanguageRus();
+        switchOverLanguageTestRus();
+
     }
 
     @Test
     public void deletingOne() {
+        activateCheckboxes();
         deletingMessages();
         deletingMessagesTestWithoutClick();
-        assertDeletingMessages();
     }
 
     @Test
     public void deletingTwo() {
-        deletingMessages();
+        activateCheckboxes();
         clickDeleteMessageButton();
-        assertDeletingMessages();
+        deletingMessagesTestWithoutClick();
     }
 
     @Test
@@ -146,6 +185,7 @@ public class Test1 {
         clickComposeButton();
         sendingMessageTrueEmail();
         clickSendMessageButton();
+        checkError();
     }
 
     @Test
@@ -153,11 +193,13 @@ public class Test1 {
         clickComposeButton();
         sendingMessageFalseEmail();
         clickSendMessageButton();
+        checkError2();
     }
 
     @Test
     public void sendTheMessage3() {
         clickComposeButton();
         clickSendMessageButton();
+        checkError3();
     }
 }
