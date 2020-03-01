@@ -40,40 +40,41 @@ public class Test1 {
     }
 
     @Step("Открыть список языков")
-    public void openLanguageList() {
+    public void changeLanguageToRus() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")));
-        driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
-    }
-
-    @Step("Выбрать английский язык")
-    public void switchOverLanguageEng() {
-        driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'English')]")));
-    }
-
-
-    @Step("Проверка русского языка")
-    public void switchOverLanguageTestRus() {
-
         String language = driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).getText();
         if (language.equals("Русский")) {
             System.out.println("Готово");
         } else {
             driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-params='lang=ru']")));
+            driver.findElement(By.xpath("//a[@data-params='lang=ru']")).click();
+        }
+    }
+
+    @Step("Открыть список языков")
+    public void changeLanguageToEN() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")));
+        String language = driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).getText();
+        if (language.equals("English")) {
+            System.out.println("Готово");
+        } else {
+            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'English')]")));
             driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
         }
     }
 
-    @Step("Проверка английского языка")
-    public void switchOverLanguageTestEng() {
 
-        String language = driver.findElement(By.xpath("//a[contains(text(),'English')]")).getText();
-        if (language.equals("Английский")) {
-            System.out.println("Готово");
-        } else {
-            driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
-            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
-        }
+    @Step("Проверка английского языка")
+    public void switchOverLanguageEng() {
+        wait.until(ExpectedConditions.titleIs("Yandex.Mail"));
+    }
+
+
+    @Step("Проверка русского языка")
+    public void switchOverLanguageTestRus() {
+        wait.until(ExpectedConditions.titleIs("Яндекс.Почта"));
     }
 
     @Step("активировать все чекбоксы")
@@ -148,14 +149,14 @@ public class Test1 {
     @Test
     public void languageEng() {
         clickSettingsButton();
-        openLanguageList();
+        changeLanguageToEN();
         switchOverLanguageEng();
     }
 
     @Test
     public void languageRus() {
         clickSettingsButton();
-        openLanguageList();
+        changeLanguageToRus();
         switchOverLanguageTestRus();
 
     }
