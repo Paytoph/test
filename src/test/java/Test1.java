@@ -67,7 +67,7 @@ public class Test1 {
 
 
     @Step("Проверка английского языка")
-    public void switchOverLanguageEng() {
+    public void switchOverLanguageTestEng() {
         wait.until(ExpectedConditions.titleIs("Yandex.Mail"));
     }
 
@@ -150,7 +150,7 @@ public class Test1 {
     public void languageEng() {
         clickSettingsButton();
         changeLanguageToEN();
-        switchOverLanguageEng();
+        switchOverLanguageTestEng();
     }
 
     @Test
