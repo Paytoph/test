@@ -1,81 +1,85 @@
 import io.qameta.allure.Step;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import io.qameta.htmlelements.WebPageFactory;
+import io.qameta.htmlelements.matcher.DisplayedMatcher;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import pages.YandexMail;
+
+import java.util.concurrent.TimeUnit;
 
 public class Test1 {
     ChromeDriver driver;
     WebDriverWait wait;
+    private static final Logger logger = LoggerFactory.getLogger(Test1.class);
+    WebPageFactory factory = new WebPageFactory();
+    YandexMail ym;
 
-    @Before
+    @BeforeTest
     public void firstTest() {
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://mail.yandex.ru");
-        String title = driver.getTitle();
-        Assert.assertEquals("Яндекс.Почта — бесплатная и надежная электронная почта", title);
+        ym = factory.get(driver, YandexMail.class);
+        ym.getWrappedDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        ym.getWrappedDriver().manage().window().maximize();
+        ym.getWrappedDriver().get("https://mail.yandex.ru");
+        Assert.assertEquals("Яндекс.Почта — бесплатная и надежная электронная почта", ym.getWrappedDriver().getTitle());
         wait = new WebDriverWait(driver, 50);
-        driver.findElement(By.xpath("//a[@class='button2 button2_size_mail-big button2_theme_mail-white button2_type_link HeadBanner-Button HeadBanner-Button-Enter with-shadow']")).click();
-        driver.findElement(By.xpath("//input[@id=\"passp-field-login\"]")).sendKeys("djeeeelik@yandex.ru");
-        driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='passp-field-passwd']")));
-        driver.findElement(By.xpath("//input[@id='passp-field-passwd']")).sendKeys("2601425Djelmc");
-        driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='nb-3']")));
+        ym.startPage().startButton().click();
+        ym.loginPage().loginField().sendKeys("djeeeelik@yandex.ru");
+        ym.loginPage().loginMailButton().click();
+        ym.loginPage().loginField().waitUntil(DisplayedMatcher.displayed());
+        ym.loginPage().passwordField().sendKeys("2601425Djelmc");
+        ym.loginPage().loginMailButton().click();
+        ym.loginPage().passwordField().waitUntil(DisplayedMatcher.displayed());
 
 
-        //driver.quit();
+    }
+
+    @AfterTest
+    public void closeDriver() {
+        driver.close();
     }
 
     @Step("нажать на кнопку 'Все настройки'")
     public void clickSettingsButton() {
-        driver.findElement(By.xpath("//a[@id='nb-3']")).click();
-        driver.findElement(By.xpath("//span[@class='settings-popup-title-content']")).click();
+        ym.lncomingPage().settingButton().click();
+        ym.popupSetting().settingPopupButton().click();
     }
 
-    @Step("Открыть список языков")
-    public void changeLanguageToRus() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")));
-        String language = driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).getText();
-        if (language.equals("Русский")) {
-            System.out.println("Готово");
+    @Step("Открыть меню раскрытия языка")
+    public void openLanguageList() {
+        ym.settingPage().openLanguageButton().waitUntil((DisplayedMatcher.displayed()));
+        ym.settingPage().openLanguageButton().click();
+    }
+
+
+    @Step("Выбрать язык")
+    public void changeLanguage(Language language) {
+        String languageName = ym.settingPage().openLanguageButton().getText();
+        ym.settingPage().openLanguageButton().click();
+        if (language.getName().equals(languageName)) {
+            logger.info("Язык не меняется");
         } else {
-            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-params='lang=ru']")));
-            driver.findElement(By.xpath("//a[@data-params='lang=ru']")).click();
+            ym.settingPage().languageButton(language.getName()).click();
         }
     }
 
-    @Step("Открыть список языков")
-    public void changeLanguageToEN() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")));
-        String language = driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).getText();
-        if (language.equals("English")) {
-            System.out.println("Готово");
-        } else {
-            driver.findElement(By.xpath("//span[@class='b-selink__link mail-Settings-Lang']")).click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'English')]")));
-            driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
-        }
+    @Step("Проверка языка")
+    public void switchOverLanguageTest(Language language) {
+        wait.until(ExpectedConditions.titleIs(language.getTitle()));
+        ym.settingPage().languageButton(language.getName()).click();
+
     }
 
-
-    @Step("Проверка английского языка")
-    public void switchOverLanguageTestEng() {
-        wait.until(ExpectedConditions.titleIs("Yandex.Mail"));
-    }
-
-
-    @Step("Проверка русского языка")
-    public void switchOverLanguageTestRus() {
-        wait.until(ExpectedConditions.titleIs("Яндекс.Почта"));
-    }
 
     @Step("активировать все чекбоксы")
     public void activateCheckboxes() {
@@ -94,25 +98,25 @@ public class Test1 {
 
     @Step("нажатие на кнопку удалить на верхней панели управления письмами")
     public void clickDeleteMessageButton() {
-        driver.findElement(By.xpath("//span[@class='mail-Toolbar-Item-Text js-toolbar-item-title js-toolbar-item-title-delete']")).click();
+        driver.findElement(By.xpath("//span[contains(@class, 'delete')]")).click();
     }
 
     @Step("проверка того,что письма не удалились")
     public void deletingMessagesTestWithClick() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='mail-Toolbar-Item-Text js-toolbar-item-title js-toolbar-item-title-delete']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(@class, 'delete')]")));
     }
 
     @Step("клик на кнопку'написать'")
     public void clickComposeButton() {
-        driver.findElement(By.xpath("//span[@class='mail-ComposeButton-Text']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='mail-Compose-From']//button")));
+        ym.lncomingPage().composeButton().click();
+        ym.sendMessagePage().sendMessageButton().waitUntil(DisplayedMatcher.displayed());
     }
 
 
     @Step("ввести в поле адреса 'кому' емэйл")
-    public void sendingMessageTrueEmail() {
+    public void sendingMessageEmail(String email) {
         driver.findElement(By.xpath("//div[@name='to']")).click();
-        driver.findElement(By.xpath("//div[@name='to']")).sendKeys("djeeeelik@yandex.ru");
+        driver.findElement(By.xpath("//div[@name='to']")).sendKeys(email);
     }
 
     @Step("нажать на кнопку отправить")
@@ -120,12 +124,6 @@ public class Test1 {
         driver.findElement(By.xpath("//button[@id='nb-16']//span[@class='_nb-button-text']")).click();
     }
 
-
-    @Step("ввести в поле адреса 'кому' случайные символы")
-    public void sendingMessageFalseEmail() {
-        driver.findElement(By.xpath("//div[@name='to']")).click();
-        driver.findElement(By.xpath("//div[@name='to']")).sendKeys("qwerty1122");
-    }
 
     @Step("Проверить, что письмо отправилось")
     public void checkError() {
@@ -149,15 +147,17 @@ public class Test1 {
     @Test
     public void languageEng() {
         clickSettingsButton();
-        changeLanguageToEN();
-        switchOverLanguageTestEng();
+        openLanguageList();
+        changeLanguage(Language.ENG);
+        switchOverLanguageTest(Language.ENG);
     }
 
     @Test
     public void languageRus() {
         clickSettingsButton();
-        changeLanguageToRus();
-        switchOverLanguageTestRus();
+        openLanguageList();
+        changeLanguage(Language.RUS);
+        switchOverLanguageTest(Language.RUS);
 
     }
 
@@ -184,7 +184,7 @@ public class Test1 {
     @Test
     public void sendTheMessage() {
         clickComposeButton();
-        sendingMessageTrueEmail();
+        sendingMessageEmail("djeeeelik@yandex.ru");
         clickSendMessageButton();
         checkError();
     }
@@ -192,7 +192,7 @@ public class Test1 {
     @Test
     public void sendTheMessage2() {
         clickComposeButton();
-        sendingMessageFalseEmail();
+        sendingMessageEmail("qwerty1122");
         clickSendMessageButton();
         checkError2();
     }
@@ -200,6 +200,7 @@ public class Test1 {
     @Test
     public void sendTheMessage3() {
         clickComposeButton();
+        sendingMessageEmail("");
         clickSendMessageButton();
         checkError3();
     }
