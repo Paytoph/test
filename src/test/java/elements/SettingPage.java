@@ -5,7 +5,8 @@ import io.qameta.htmlelements.annotation.FindBy;
 import io.qameta.htmlelements.annotation.Param;
 import io.qameta.htmlelements.element.ExtendedWebElement;
 
-public interface SettingPage {
+public interface SettingPage
+        extends ExtendedWebElement {
 
     // Кнопка раскрытия языка
 

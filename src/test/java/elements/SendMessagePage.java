@@ -4,7 +4,9 @@ import io.qameta.htmlelements.annotation.Description;
 import io.qameta.htmlelements.annotation.FindBy;
 import io.qameta.htmlelements.element.ExtendedWebElement;
 
-public interface SendMessagePage {
+public interface SendMessagePage
+        extends ExtendedWebElement {
+
 
     // кнопка отправить
 

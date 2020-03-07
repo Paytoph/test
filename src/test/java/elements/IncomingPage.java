@@ -6,7 +6,8 @@ import io.qameta.htmlelements.element.ExtendedWebElement;
 
 import java.util.List;
 
-public interface IncomingPage {
+public interface IncomingPage
+        extends ExtendedWebElement {
 
     // Кнопка настроек
 
@@ -31,5 +32,11 @@ public interface IncomingPage {
     @Description("Кнопка удалить на верхней панели")
     @FindBy("//span[contains(@class, 'delete')]")
     ExtendedWebElement deleteButton();
+
+    // проверка удаления писем
+
+    @Description("кол-во сообщений")
+    @FindBy("//span[@class='mail-NestedList-Item-Info-Link-Text']")
+    ExtendedWebElement quantityMessages();
 
 }

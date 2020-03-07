@@ -1,6 +1,7 @@
 import io.qameta.allure.Step;
 import io.qameta.htmlelements.WebPageFactory;
 import io.qameta.htmlelements.matcher.DisplayedMatcher;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,8 @@ import org.testng.annotations.Test;
 import pages.YandexMail;
 
 import java.util.concurrent.TimeUnit;
+
+import static io.qameta.htmlelements.matcher.HasTextMatcher.hasText;
 
 public class Test1 {
     ChromeDriver driver;
@@ -36,10 +39,10 @@ public class Test1 {
         ym.startPage().startButton().click();
         ym.loginPage().loginField().sendKeys("djeeeelik@yandex.ru");
         ym.loginPage().loginMailButton().click();
-        ym.loginPage().loginField().waitUntil(DisplayedMatcher.displayed());
+        ym.loginPage().passwordField().waitUntil(DisplayedMatcher.displayed());
         ym.loginPage().passwordField().sendKeys("2601425Djelmc");
         ym.loginPage().loginMailButton().click();
-        ym.loginPage().passwordField().waitUntil(DisplayedMatcher.displayed());
+        ym.lncomingPage().deleteButton().waitUntil("страница не загрузилась", DisplayedMatcher.displayed(), 50);
 
 
     }
@@ -83,22 +86,22 @@ public class Test1 {
 
     @Step("активировать все чекбоксы")
     public void activateCheckboxes() {
-        driver.findElements(By.xpath("//label[@data-nb='checkbox']")).forEach(WebElement::click);
+        ym.lncomingPage().checkBoxes().forEach(WebElement::click);
     }
 
     @Step("нажать кнопку del на клавиатуре")
     public void deletingMessages() {
-        driver.findElement(By.xpath("//a[@id='nb-3']")).sendKeys(Keys.DELETE);
+        ym.lncomingPage().deleteButton().sendKeys(Keys.DELETE);
     }
 
     @Step("Проверка того,что письма удалились")
-    public void deletingMessagesTestWithoutClick() {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("/label[@data-nb='checkbox']")));
+    public void deletingMessagesTestWithoutClick(String name) {
+        ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", Matchers.not(hasText(name)), 15);
     }
 
     @Step("нажатие на кнопку удалить на верхней панели управления письмами")
     public void clickDeleteMessageButton() {
-        driver.findElement(By.xpath("//span[contains(@class, 'delete')]")).click();
+        ym.lncomingPage().deleteButton().click();
     }
 
     @Step("проверка того,что письма не удалились")
@@ -164,15 +167,17 @@ public class Test1 {
     @Test
     public void deletingOne() {
         activateCheckboxes();
+        String name = ym.lncomingPage().quantityMessages().getText();
         deletingMessages();
-        deletingMessagesTestWithoutClick();
+        deletingMessagesTestWithoutClick(name);
     }
 
     @Test
     public void deletingTwo() {
         activateCheckboxes();
+        String name = ym.lncomingPage().quantityMessages().getText();
         clickDeleteMessageButton();
-        deletingMessagesTestWithoutClick();
+        deletingMessagesTestWithoutClick(name);
     }
 
     @Test
