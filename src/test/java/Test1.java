@@ -27,7 +27,7 @@ public class Test1 {
     WebPageFactory factory = new WebPageFactory();
     YandexMail ym;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void firstTest() {
         driver = new ChromeDriver();
         ym = factory.get(driver, YandexMail.class);
@@ -55,6 +55,8 @@ public class Test1 {
     @Step("нажать на кнопку 'Все настройки'")
     public void clickSettingsButton() {
         ym.lncomingPage().settingButton().click();
+        ym.popupSetting().settingPopupButton().waitUntil("не открылась страница настроек",
+                DisplayedMatcher.displayed(), 25);
         ym.popupSetting().settingPopupButton().click();
     }
 
@@ -68,19 +70,20 @@ public class Test1 {
     @Step("Выбрать язык")
     public void changeLanguage(Language language) {
         String languageName = ym.settingPage().openLanguageButton().getText();
-        ym.settingPage().openLanguageButton().click();
         if (language.getName().equals(languageName)) {
             logger.info("Язык не меняется");
         } else {
+            ym.settingPage().languageButton(language.getName())
+                    .waitUntil("язык не выбрался", DisplayedMatcher.displayed(), 20);
             ym.settingPage().languageButton(language.getName()).click();
         }
     }
 
     @Step("Проверка языка")
     public void switchOverLanguageTest(Language language) {
-        wait.until(ExpectedConditions.titleIs(language.getTitle()));
-        ym.settingPage().languageButton(language.getName()).click();
-
+        ym.settingPage().openLanguageButton()
+                .waitUntil("проверка не произошла", Matchers.not(DisplayedMatcher.displayed()), 25);
+        Assert.assertEquals(ym.settingPage().languageButton(language.getName()).getText(), language.getName());
     }
 
 
@@ -91,12 +94,17 @@ public class Test1 {
 
     @Step("нажать кнопку del на клавиатуре")
     public void deletingMessages() {
-        ym.lncomingPage().deleteButton().sendKeys(Keys.DELETE);
+        ym.lncomingPage().settingButton().sendKeys(Keys.DELETE);
     }
 
     @Step("Проверка того,что письма удалились")
     public void deletingMessagesTestWithoutClick(String name) {
-        ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", Matchers.not(hasText(name)), 15);
+        if (Integer.parseInt(name) < 30) {
+            ym.lncomingPage().quantityMessages().waitUntil("письма не удалились",
+                    Matchers.not(DisplayedMatcher.displayed()), 25);
+        } else {
+            ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", Matchers.not(hasText(name)), 15);
+        }
     }
 
     @Step("нажатие на кнопку удалить на верхней панели управления письмами")
@@ -105,49 +113,48 @@ public class Test1 {
     }
 
     @Step("проверка того,что письма не удалились")
-    public void deletingMessagesTestWithClick() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(@class, 'delete')]")));
+    public void deletingMessagesTestWithClick(String name) {
+        ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", hasText(name), 15);
     }
 
     @Step("клик на кнопку'написать'")
     public void clickComposeButton() {
         ym.lncomingPage().composeButton().click();
-        ym.sendMessagePage().sendMessageButton().waitUntil(DisplayedMatcher.displayed());
+        ym.sendMessagePage().sendMessageButton().waitUntil("кнопка не появилась", DisplayedMatcher.displayed(), 15);
     }
 
 
     @Step("ввести в поле адреса 'кому' емэйл")
     public void sendingMessageEmail(String email) {
-        driver.findElement(By.xpath("//div[@name='to']")).click();
-        driver.findElement(By.xpath("//div[@name='to']")).sendKeys(email);
+        ym.sendMessagePage().sendingMessage().click();
+        ym.sendMessagePage().sendingMessage().sendKeys(email);
     }
 
     @Step("нажать на кнопку отправить")
     public void clickSendMessageButton() {
-        driver.findElement(By.xpath("//button[@id='nb-16']//span[@class='_nb-button-text']")).click();
+        ym.sendMessagePage().sendMessageButton().click();
     }
 
 
     @Step("Проверить, что письмо отправилось")
     public void checkError() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='mail-Done-Title js-title-info']")));
+        ym.sendMessageDone().waitUntil("письмо отправилось", DisplayedMatcher.displayed(), 25);
     }
 
-    @Step("Проверить, что емэйл некорректный")
-    public void checkError2() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
-        String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
-        Assert.assertEquals("Некорректные адреса: qwerty1122", message);
-    }
 
     @Step("Проверить, что появилась ошибка")
-    public void checkError3() {
+    public void checkError2(boolean thereWasAnError) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
         String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
-        Assert.assertEquals("Поле не заполнено. Необходимо ввести адрес.", message);
+        if (thereWasAnError) {
+            Assert.assertEquals("Поле не заполнено. Необходимо ввести адрес.", message);
+        } else {
+            Assert.assertEquals("Некорректные адреса: qwerty1122", message);
+        }
+
     }
 
-    @Test
+    @Test(groups = "group1")
     public void languageEng() {
         clickSettingsButton();
         openLanguageList();
@@ -182,8 +189,9 @@ public class Test1 {
 
     @Test
     public void deletingThree() {
+        String name = ym.lncomingPage().quantityMessages().getText();
         clickDeleteMessageButton();
-        deletingMessagesTestWithClick();
+        deletingMessagesTestWithClick(name);
     }
 
     @Test
@@ -199,7 +207,7 @@ public class Test1 {
         clickComposeButton();
         sendingMessageEmail("qwerty1122");
         clickSendMessageButton();
-        checkError2();
+        checkError2(false);
     }
 
     @Test
@@ -207,6 +215,6 @@ public class Test1 {
         clickComposeButton();
         sendingMessageEmail("");
         clickSendMessageButton();
-        checkError3();
+        checkError2(true);
     }
 }

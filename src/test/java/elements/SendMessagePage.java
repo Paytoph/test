@@ -26,5 +26,6 @@ public interface SendMessagePage
     @FindBy("//div[contains(@class, 'error')]")
     ExtendedWebElement errorField();
 
+    //
 
 }

@@ -4,6 +4,7 @@ import elements.*;
 import io.qameta.htmlelements.WebPage;
 import io.qameta.htmlelements.annotation.Description;
 import io.qameta.htmlelements.annotation.FindBy;
+import io.qameta.htmlelements.element.ExtendedWebElement;
 import io.qameta.htmlelements.extension.page.BaseUrl;
 
 @BaseUrl("https://mail.yandex.ru")
@@ -24,24 +25,30 @@ public interface YandexMail extends WebPage {
     // Страница с входящими сообщениями
 
     @Description("Страница ввода пароля")
-    @FindBy("//div[@class, 'mail-App-Content js-mail-app-content']")
+    @FindBy("//div")
     IncomingPage lncomingPage();
 
     // Всплывающее окно настроек
 
     @Description("Всплывающее окно настроек")
-    @FindBy("//div[@class, 'settings-dropdown']")
+    @FindBy("//div")
     PopupSetting popupSetting();
 
     // Страница с настройками
 
     @Description("Страница с настройками")
-    @FindBy("//div[@class, 'mail-App-Content js-mail-app-content']")
+    @FindBy("//div")
     SettingPage settingPage();
 
     // Страница отправки сообщений
 
     @Description("Страница отправки сообщений")
-    @FindBy("//div[@class, 'mail-Layout-Content']")
+    @FindBy("//div")
     SendMessagePage sendMessagePage();
+
+    // страница, которая подтверждает отправку сообщения
+
+    @Description("страница, которая подтверждает отправку сообщения")
+    @FindBy("//div[@class='mail-Done-Title js-title-info']")
+    ExtendedWebElement sendMessageDone();
 }

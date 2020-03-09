@@ -27,24 +27,31 @@ dependencies {
 }
 
 //конфигурация для аллюр репорта
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath "io.qameta.allure:allure-gradle:2.5"
-    }
-}
-
+ buildscript {
+     repositories {
+         jcenter()
+ }
+ dependencies {
+ classpath "io.qameta.allure:allure-gradle:2.5"
+ }
+ }
 allure {
-    version = '2.7.0'
+    version = '2.5.0'
     aspectjweaver = true
     autoconfigure = true
 }
+tasks.withType(Test) {
+    systemProperty "file.encoding", "UTF-8"
 
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+//тестовая задача
 task p1(type: Test) {
     ignoreFailures = true
-    useTestNG() {
-        options.suites 'src/test/java/tests/testng/testingShow.xml'
+    useTestNG()
+            {
+                options.suites 'src/test/resources/zadanie2.xml'
     }
 }
