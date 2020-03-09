@@ -82,8 +82,7 @@ public class Test1 {
     @Step("Проверка языка")
     public void switchOverLanguageTest(Language language) {
         ym.settingPage().openLanguageButton()
-                .waitUntil("проверка не произошла", Matchers.not(DisplayedMatcher.displayed()), 25);
-        Assert.assertEquals(ym.settingPage().languageButton(language.getName()).getText(), language.getName());
+                .waitUntil("проверка не произошла", hasText(language.getName()), 25);
     }
 
 

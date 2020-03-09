@@ -11,7 +11,7 @@ public interface SettingPage
     // Кнопка раскрытия языка
 
     @Description("Кнопка раскрытия языка")
-    @FindBy("//span[@class='b-selink ns-action']")
+    @FindBy("//span[@class='b-selink ns-action']/span[1]/span[2]")
     ExtendedWebElement openLanguageButton();
 
     // Кнопка выбора английского языка
