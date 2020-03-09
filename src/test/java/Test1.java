@@ -161,7 +161,7 @@ public class Test1 {
         switchOverLanguageTest(Language.ENG);
     }
 
-    @Test
+    @Test(groups = "group2")
     public void languageRus() {
         clickSettingsButton();
         openLanguageList();
@@ -170,7 +170,7 @@ public class Test1 {
 
     }
 
-    @Test
+    @Test(groups = "group3")
     public void deletingOne() {
         activateCheckboxes();
         String name = ym.lncomingPage().quantityMessages().getText();
@@ -178,7 +178,7 @@ public class Test1 {
         deletingMessagesTestWithoutClick(name);
     }
 
-    @Test
+    @Test(groups = "group4")
     public void deletingTwo() {
         activateCheckboxes();
         String name = ym.lncomingPage().quantityMessages().getText();
@@ -186,14 +186,14 @@ public class Test1 {
         deletingMessagesTestWithoutClick(name);
     }
 
-    @Test
+    @Test(groups = "group5")
     public void deletingThree() {
         String name = ym.lncomingPage().quantityMessages().getText();
         clickDeleteMessageButton();
         deletingMessagesTestWithClick(name);
     }
 
-    @Test
+    @Test(groups = "group6")
     public void sendTheMessage() {
         clickComposeButton();
         sendingMessageEmail("djeeeelik@yandex.ru");
@@ -201,7 +201,7 @@ public class Test1 {
         checkError();
     }
 
-    @Test
+    @Test(groups = "group7")
     public void sendTheMessage2() {
         clickComposeButton();
         sendingMessageEmail("qwerty1122");
@@ -209,7 +209,7 @@ public class Test1 {
         checkError2(false);
     }
 
-    @Test
+    @Test(groups = "group8")
     public void sendTheMessage3() {
         clickComposeButton();
         sendingMessageEmail("");
