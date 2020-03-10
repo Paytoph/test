@@ -1,0 +1,101 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "deletingThree",
+    "uid" : "849bfbfb0a01338d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583773459932,
+      "stop" : 1583773460185,
+      "duration" : 253
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "languageEng",
+    "uid" : "1c9e02c793e99a39",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583820930190,
+      "stop" : 1583820933303,
+      "duration" : 3113
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "languageRus",
+    "uid" : "2844068bbbd37170",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821072135,
+      "stop" : 1583821075069,
+      "duration" : 2934
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "deletingOne",
+    "uid" : "1f5b8c52f93726fe",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821176293,
+      "stop" : 1583821202789,
+      "duration" : 26496
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "deletingTwo",
+    "uid" : "26027d3524fe56be",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821312219,
+      "stop" : 1583821338715,
+      "duration" : 26496
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "sendTheMessage",
+    "uid" : "554f1508d8ce4218",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821516182,
+      "stop" : 1583821518682,
+      "duration" : 2500
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "sendTheMessage2",
+    "uid" : "c309e889afa6954",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821613922,
+      "stop" : 1583821615480,
+      "duration" : 1558
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "sendTheMessage3",
+    "uid" : "55be39085f017656",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1583821703967,
+      "stop" : 1583821705628,
+      "duration" : 1661
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

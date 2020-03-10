@@ -1,0 +1,137 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "acer",
+    "children" : [ {
+      "name" : "9240@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "sendTheMessage3",
+        "uid" : "55be39085f017656",
+        "parentUid" : "3dc38b328c2bcf0e09a975d50a2c9cf0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821703967,
+          "stop" : 1583821705628,
+          "duration" : 1661
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3dc38b328c2bcf0e09a975d50a2c9cf0"
+    }, {
+      "name" : "6564@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "sendTheMessage",
+        "uid" : "554f1508d8ce4218",
+        "parentUid" : "646c52f60edb45af70349b7d678175e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821516182,
+          "stop" : 1583821518682,
+          "duration" : 2500
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "646c52f60edb45af70349b7d678175e8"
+    }, {
+      "name" : "5540@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "languageRus",
+        "uid" : "2844068bbbd37170",
+        "parentUid" : "fe1886e93b5fe4f43cd68fba85a757ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821072135,
+          "stop" : 1583821075069,
+          "duration" : 2934
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fe1886e93b5fe4f43cd68fba85a757ac"
+    }, {
+      "name" : "5980@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "languageEng",
+        "uid" : "1c9e02c793e99a39",
+        "parentUid" : "b6443800a0538f58400c44d472fd3699",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583820930190,
+          "stop" : 1583820933303,
+          "duration" : 3113
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b6443800a0538f58400c44d472fd3699"
+    }, {
+      "name" : "1876@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "deletingTwo",
+        "uid" : "26027d3524fe56be",
+        "parentUid" : "34f50b825ab581d7d56d628eb727ff96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821312219,
+          "stop" : 1583821338715,
+          "duration" : 26496
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "34f50b825ab581d7d56d628eb727ff96"
+    }, {
+      "name" : "6760@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "deletingThree",
+        "uid" : "849bfbfb0a01338d",
+        "parentUid" : "6b18754ca15b898317bba2205a7cf495",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583773459932,
+          "stop" : 1583773460185,
+          "duration" : 253
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6b18754ca15b898317bba2205a7cf495"
+    }, {
+      "name" : "9132@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "sendTheMessage2",
+        "uid" : "c309e889afa6954",
+        "parentUid" : "0721c2cbc6f853eb289b5fe07bfd427d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821613922,
+          "stop" : 1583821615480,
+          "duration" : 1558
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0721c2cbc6f853eb289b5fe07bfd427d"
+    }, {
+      "name" : "8032@acer.Test worker(11)",
+      "children" : [ {
+        "name" : "deletingOne",
+        "uid" : "1f5b8c52f93726fe",
+        "parentUid" : "7ec212e50ef59e0fc3f1414efaaf0bd9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583821176293,
+          "stop" : 1583821202789,
+          "duration" : 26496
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ec212e50ef59e0fc3f1414efaaf0bd9"
+    } ],
+    "uid" : "06de9290609f88c13854c863a3acf6b9"
+  } ]
+}
