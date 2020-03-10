@@ -4,7 +4,7 @@
     <test name="YandexMail">
         <groups>
             <run>
-                <include name="group5"/>
+                <include name="group8"/>
             </run>
         </groups>
         <classes>
