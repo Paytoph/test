@@ -1,6 +1,6 @@
 public enum Language {
-    ENG("English", "Yandex.Mail"),
-    RUS("Русский", "Яндекс.Почта");
+    ENG("lang=en", "English"),
+    RUS("lang=ru", "Русский");
     private final String name;
     private final String title;
 

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Тесты от Сергея">
-    <test name="YandexMail">
+    <test name="Модуль работы с входящими письмами">
         <groups>
             <run>
-                <include name="group8"/>
+                <include name="YA-2"/>
+                <include name="YA-3"/>
+                <include name="YA-4"/>
             </run>
         </groups>
         <classes>

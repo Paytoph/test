@@ -1,3 +1,4 @@
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.qameta.htmlelements.WebPageFactory;
 import io.qameta.htmlelements.matcher.DisplayedMatcher;
@@ -21,14 +22,14 @@ import java.util.concurrent.TimeUnit;
 import static io.qameta.htmlelements.matcher.HasTextMatcher.hasText;
 
 public class Test1 {
+    private static final Logger logger = LoggerFactory.getLogger(Test1.class);
     ChromeDriver driver;
     WebDriverWait wait;
-    private static final Logger logger = LoggerFactory.getLogger(Test1.class);
     WebPageFactory factory = new WebPageFactory();
     YandexMail ym;
 
     @BeforeTest(alwaysRun = true)
-    public void firstTest() {
+    public void SetUp() {
         driver = new ChromeDriver();
         ym = factory.get(driver, YandexMail.class);
         ym.getWrappedDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -42,20 +43,21 @@ public class Test1 {
         ym.loginPage().passwordField().waitUntil(DisplayedMatcher.displayed());
         ym.loginPage().passwordField().sendKeys("2601425Djelmc");
         ym.loginPage().loginMailButton().click();
-        ym.lncomingPage().deleteButton().waitUntil("страница не загрузилась", DisplayedMatcher.displayed(), 50);
+        ym.lncomingPage()
+                .waitUntil("Главная страница не подтверждена", DisplayedMatcher.displayed(), 50);
 
 
     }
 
     @AfterTest
-    public void closeDriver() {
+    public void tearDown() {
         driver.close();
     }
 
-    @Step("нажать на кнопку 'Все настройки'")
+    @Step("Нажать на кнопку 'Все настройки'")
     public void clickSettingsButton() {
         ym.lncomingPage().settingButton().click();
-        ym.popupSetting().settingPopupButton().waitUntil("не открылась страница настроек",
+        ym.popupSetting().settingPopupButton().waitUntil("Не открылась страница настроек",
                 DisplayedMatcher.displayed(), 25);
         ym.popupSetting().settingPopupButton().click();
     }
@@ -65,7 +67,6 @@ public class Test1 {
         ym.settingPage().openLanguageButton().waitUntil((DisplayedMatcher.displayed()));
         ym.settingPage().openLanguageButton().click();
     }
-
 
     @Step("Выбрать язык")
     public void changeLanguage(Language language) {
@@ -82,78 +83,90 @@ public class Test1 {
     @Step("Проверка языка")
     public void switchOverLanguageTest(Language language) {
         ym.settingPage().openLanguageButton()
-                .waitUntil("проверка не произошла", hasText(language.getName()), 25);
+                .waitUntil("Проверка не произошла", hasText(language.getTitle()), 25);
     }
 
-
-    @Step("активировать все чекбоксы")
+    @Step("Активировать все чекбоксы")
     public void activateCheckboxes() {
-        ym.lncomingPage().checkBoxes().forEach(WebElement::click);
+        ym.lncomingPage().checkBoxes("djeeeelik@yandex.com").forEach(WebElement::click);
     }
 
-    @Step("нажать кнопку del на клавиатуре")
+    @Step("Нажать кнопку del на клавиатуре")
     public void deletingMessages() {
         ym.lncomingPage().settingButton().sendKeys(Keys.DELETE);
     }
 
-    @Step("Проверка того,что письма удалились")
-    public void deletingMessagesTestWithoutClick(String name) {
-        if (Integer.parseInt(name) < 30) {
-            ym.lncomingPage().quantityMessages().waitUntil("письма не удалились",
-                    Matchers.not(DisplayedMatcher.displayed()), 25);
-        } else {
-            ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", Matchers.not(hasText(name)), 15);
-        }
+    @Step("подтвердить удаление")
+    public void proveDeleting() {
+        ym.lncomingPage().proveDeleting().click();
     }
 
-    @Step("нажатие на кнопку удалить на верхней панели управления письмами")
+    @Step("Проверка того,что письма удалились")
+    public void deletingMessagesTestWithoutClick() {
+        ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
+                .waitUntil("", Matchers.iterableWithSize(0), 15);
+        Allure.addAttachment("Проверка удаления писем", "Письма удалились");
+    }
+
+    @Step("Нажатие на кнопку удалить на верхней панели управления письмами")
     public void clickDeleteMessageButton() {
         ym.lncomingPage().deleteButton().click();
     }
 
-    @Step("проверка того,что письма не удалились")
-    public void deletingMessagesTestWithClick(String name) {
-        ym.lncomingPage().quantityMessages().waitUntil("письма не удалились", hasText(name), 15);
+    @Step("Проверка того,что письма не удалились")
+    public void deletingMessagesTestWithClick() {
+        ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
+                .waitUntil("", Matchers.not(Matchers.iterableWithSize(1)), 15);
+        Allure.addAttachment("Проверка не удаленных писем", "Письма не удалились");
     }
 
-    @Step("клик на кнопку'написать'")
+    @Step("Проверка активированных чекбоксов")
+    public void checkActivatingCheckboxes() {
+        ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
+                .waitUntil(extendedWebElements -> extendedWebElements.size() > 0);
+    }
+
+    @Step("Клик на кнопку'написать'")
     public void clickComposeButton() {
         ym.lncomingPage().composeButton().click();
-        ym.sendMessagePage().sendMessageButton().waitUntil("кнопка не появилась", DisplayedMatcher.displayed(), 15);
+        ym.sendMessagePage().sendMessageButton()
+                .waitUntil("Кнопка не появилась", DisplayedMatcher.displayed(), 15);
     }
 
-
-    @Step("ввести в поле адреса 'кому' емэйл")
+    @Step("Ввести в поле адреса 'кому' емэйл")
     public void sendingMessageEmail(String email) {
         ym.sendMessagePage().sendingMessage().click();
         ym.sendMessagePage().sendingMessage().sendKeys(email);
     }
 
-    @Step("нажать на кнопку отправить")
+    @Step("Ввести тему сообщения")
+    public void fillTheme(String theme) {
+        ym.sendMessagePage().messageTheme().sendKeys(theme);
+    }
+
+    @Step("Нажать на кнопку отправить")
     public void clickSendMessageButton() {
         ym.sendMessagePage().sendMessageButton().click();
     }
 
-
     @Step("Проверить, что письмо отправилось")
     public void checkError() {
-        ym.sendMessageDone().waitUntil("письмо отправилось", DisplayedMatcher.displayed(), 25);
+        ym.sendMessageDone()
+                .waitUntil("Письмо отправилось", DisplayedMatcher.displayed(), 25);
     }
 
-
     @Step("Проверить, что появилась ошибка")
-    public void checkError2(boolean thereWasAnError) {
+    public void checkError2(boolean thereWasAnError, String email) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
         String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
         if (thereWasAnError) {
             Assert.assertEquals("Поле не заполнено. Необходимо ввести адрес.", message);
         } else {
-            Assert.assertEquals("Некорректные адреса: qwerty1122", message);
+            Assert.assertEquals("Некорректные адреса: " + email, message);
         }
-
     }
 
-    @Test(groups = "group1")
+    @Test(groups = "YA-1.1", description = "Переключение языка на английский")
     public void languageEng() {
         clickSettingsButton();
         openLanguageList();
@@ -161,59 +174,92 @@ public class Test1 {
         switchOverLanguageTest(Language.ENG);
     }
 
-    @Test(groups = "group2")
+    @Test(groups = "YA-1.2", description = "Переключение языка на русский")
     public void languageRus() {
         clickSettingsButton();
         openLanguageList();
         changeLanguage(Language.RUS);
         switchOverLanguageTest(Language.RUS);
-
     }
 
-    @Test(groups = "group3")
-    public void deletingOne() {
-        activateCheckboxes();
-        String name = ym.lncomingPage().quantityMessages().getText();
-        deletingMessages();
-        deletingMessagesTestWithoutClick(name);
-    }
-
-    @Test(groups = "group4")
+    @Test(groups = "YA-3", description = "Удаление выбранных писем")
     public void deletingTwo() {
         activateCheckboxes();
-        String name = ym.lncomingPage().quantityMessages().getText();
         clickDeleteMessageButton();
-        deletingMessagesTestWithoutClick(name);
+        deletingMessagesTestWithoutClick();
     }
 
-    @Test(groups = "group5")
+    @Test(groups = "YA-2", description = ("Удаление без выбора писем для удаления"))
     public void deletingThree() {
-        String name = ym.lncomingPage().quantityMessages().getText();
         clickDeleteMessageButton();
-        deletingMessagesTestWithClick(name);
+        deletingMessagesTestWithClick();
     }
 
-    @Test(groups = "group6")
+    @Test(groups = "YA-4", description = ("Выделение писем"))
+    public void activatingCheckboxes() {
+        activateCheckboxes();
+        checkActivatingCheckboxes();
+    }
+
+    @Test(groups = "YA-5", description = "Отправка письма")
     public void sendTheMessage() {
+        clickComposeButton();
+        sendingMessageEmail("djeeeelik@yandex.ru");
+        fillTheme("Fire");
+        clickSendMessageButton();
+        checkError();
+    }
+
+    @Test(groups = "YA-6.1", description = "Отправка письма без указания адреса получателя и темы")
+    public void sendTheMessage3() {
+        clickComposeButton();
+        sendingMessageEmail("");
+        clickSendMessageButton();
+        checkError2(true, "");
+    }
+
+    @Test(groups = "YA-6.2", description = "Отправка письма без указания адреса получателя")
+    public void sendTheMessage4() {
+        clickComposeButton();
+        sendingMessageEmail("");
+        fillTheme("Water");
+        clickSendMessageButton();
+        checkError2(true, "");
+    }
+
+    @Test(groups = "YA-6.3", description = "Отправка письма без указания темы")
+    public void sendTheMessage5() {
         clickComposeButton();
         sendingMessageEmail("djeeeelik@yandex.ru");
         clickSendMessageButton();
         checkError();
     }
 
-    @Test(groups = "group7")
-    public void sendTheMessage2() {
+    @Test(groups = "YA-6.4.1", description = "Отправка письма с некорректным адресом получателя (без @)")
+    public void sendTheMessage6() {
         clickComposeButton();
-        sendingMessageEmail("qwerty1122");
+        sendingMessageEmail("djeeeelikyandex.ru");
+        fillTheme("Fire");
         clickSendMessageButton();
-        checkError2(false);
+        checkError2(false, "djeeeelikyandex.ru");
     }
 
-    @Test(groups = "group8")
-    public void sendTheMessage3() {
+    @Test(groups = "YA-6.4.2",
+            description = "Отправка письма с некорректным адресом получателя (содержащий @ @)")
+    public void sendTheMessage7() {
         clickComposeButton();
-        sendingMessageEmail("");
+        sendingMessageEmail("djeeeelik@@yandex.ru");
+        fillTheme("Firewef");
         clickSendMessageButton();
-        checkError2(true);
+        checkError2(false, "djeeeelik@@yandex.ru");
+
+    }
+
+    @Test(groups = "6.4.3", description = "Отправка письма с некорректным адресом получателя (без домена)")
+    public void sendTheMessage8() {
+        clickComposeButton();
+        sendingMessageEmail("djeeeelik@yandex");
+        fillTheme("Fire");
+        clickSendMessageButton();
     }
 }

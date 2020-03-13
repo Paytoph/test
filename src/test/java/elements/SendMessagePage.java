@@ -8,19 +8,25 @@ public interface SendMessagePage
         extends ExtendedWebElement {
 
 
-    // кнопка отправить
+    // Кнопка отправить
 
     @Description("кнопка отправить")
     @FindBy("//span[contains(@class, 'User')]/..//button")
     ExtendedWebElement sendMessageButton();
 
-    // поле 'кому'
+    // Поле 'кому'
 
     @Description("поле 'кому'")
     @FindBy("//div[@name='to']")
     ExtendedWebElement sendingMessage();
 
-    // поле с ошибкой
+    // Поле с темой
+
+    @Description(("поле с темой"))
+    @FindBy("//input[contains(@name, 'subj')]")
+    ExtendedWebElement messageTheme();
+
+    // Поле с ошибкой
 
     @Description("поле с ошибкой")
     @FindBy("//div[contains(@class, 'error')]")

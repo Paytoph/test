@@ -24,14 +24,14 @@ public interface YandexMail extends WebPage {
 
     // Страница с входящими сообщениями
 
-    @Description("Страница ввода пароля")
-    @FindBy("//div")
+    @Description("Страница c входящими сообщениями")
+    @FindBy("//div[@class='mail-Layout-Inner']")
     IncomingPage lncomingPage();
 
     // Всплывающее окно настроек
 
     @Description("Всплывающее окно настроек")
-    @FindBy("//div")
+    @FindBy("//div[@id='settings-dropdown']")
     PopupSetting popupSetting();
 
     // Страница с настройками
