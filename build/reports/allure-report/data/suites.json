@@ -4,109 +4,161 @@
   "children" : [ {
     "name" : "Тесты от Сергея",
     "children" : [ {
-      "name" : "YandexMail",
+      "name" : "Модуль работы с отправками писем",
       "children" : [ {
         "name" : "Test1",
         "children" : [ {
-          "name" : "deletingThree",
-          "uid" : "849bfbfb0a01338d",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма",
+          "uid" : "82e2b582323d58b3",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583773459932,
-            "stop" : 1583773460185,
-            "duration" : 253
+            "start" : 1584100181523,
+            "stop" : 1584100186390,
+            "duration" : 4867
           },
           "flaky" : false,
           "parameters" : [ ]
         }, {
-          "name" : "languageEng",
-          "uid" : "1c9e02c793e99a39",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма без указания адреса получателя и темы",
+          "uid" : "3fb133f7d7fbe6d5",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583820930190,
-            "stop" : 1583820933303,
-            "duration" : 3113
+            "start" : 1584100186400,
+            "stop" : 1584100188214,
+            "duration" : 1814
           },
           "flaky" : false,
           "parameters" : [ ]
         }, {
-          "name" : "languageRus",
-          "uid" : "2844068bbbd37170",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма без указания адреса получателя",
+          "uid" : "29e4ed1cddb4ae85",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583821072135,
-            "stop" : 1583821075069,
-            "duration" : 2934
+            "start" : 1584100188218,
+            "stop" : 1584100189318,
+            "duration" : 1100
           },
           "flaky" : false,
           "parameters" : [ ]
         }, {
-          "name" : "deletingOne",
-          "uid" : "1f5b8c52f93726fe",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма без указания темы",
+          "uid" : "b44403d49dc52a9d",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583821176293,
-            "stop" : 1583821202789,
-            "duration" : 26496
+            "start" : 1584100189321,
+            "stop" : 1584100193075,
+            "duration" : 3754
           },
           "flaky" : false,
           "parameters" : [ ]
         }, {
-          "name" : "deletingTwo",
-          "uid" : "26027d3524fe56be",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма с некорректным адресом получателя (без @)",
+          "uid" : "a3a207d2e3bc9435",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583821312219,
-            "stop" : 1583821338715,
-            "duration" : 26496
+            "start" : 1584100193082,
+            "stop" : 1584100194675,
+            "duration" : 1593
           },
           "flaky" : false,
           "parameters" : [ ]
         }, {
-          "name" : "sendTheMessage",
-          "uid" : "554f1508d8ce4218",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
+          "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
+          "uid" : "b9a475cce4b907b9",
+          "parentUid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa",
           "status" : "passed",
           "time" : {
-            "start" : 1583821516182,
-            "stop" : 1583821518682,
-            "duration" : 2500
-          },
-          "flaky" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "sendTheMessage2",
-          "uid" : "c309e889afa6954",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
-          "status" : "passed",
-          "time" : {
-            "start" : 1583821613922,
-            "stop" : 1583821615480,
-            "duration" : 1558
-          },
-          "flaky" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "sendTheMessage3",
-          "uid" : "55be39085f017656",
-          "parentUid" : "0ae8195add5655744d696b4077955d68",
-          "status" : "passed",
-          "time" : {
-            "start" : 1583821703967,
-            "stop" : 1583821705628,
-            "duration" : 1661
+            "start" : 1584100194681,
+            "stop" : 1584100197047,
+            "duration" : 2366
           },
           "flaky" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "0ae8195add5655744d696b4077955d68"
+        "uid" : "1bfb8ae6cfbcd98ee9f4852ed3e34baa"
       } ],
-      "uid" : "bd2f6d53435ffe61881628f717febb42"
+      "uid" : "53a1eee0fefc00014f7af7b7f83d3756"
+    }, {
+      "name" : "Модуль языки",
+      "children" : [ {
+        "name" : "Test1",
+        "children" : [ {
+          "name" : "Переключение языка на английский",
+          "uid" : "ff739b6010151ee4",
+          "parentUid" : "e13f20eb3040077398601da61bd27575",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584100327291,
+            "stop" : 1584100330872,
+            "duration" : 3581
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Переключение языка на русский",
+          "uid" : "1210e3289f003cc0",
+          "parentUid" : "e13f20eb3040077398601da61bd27575",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584100331147,
+            "stop" : 1584100333584,
+            "duration" : 2437
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "e13f20eb3040077398601da61bd27575"
+      } ],
+      "uid" : "aeea25b4565615bf4d5c847084a35222"
+    }, {
+      "name" : "Модуль работы с входящими письмами",
+      "children" : [ {
+        "name" : "Test1",
+        "children" : [ {
+          "name" : "Выделение писем",
+          "uid" : "9ad33a85dcabb279",
+          "parentUid" : "e42d004e0f8a04c639617c8f9ecdf55b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584100524563,
+            "stop" : 1584100525512,
+            "duration" : 949
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        }, {
+          "name" : "Удаление без выбора писем для удаления",
+          "uid" : "2bc3efb87d1365c9",
+          "parentUid" : "e42d004e0f8a04c639617c8f9ecdf55b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584100525984,
+            "stop" : 1584100551380,
+            "duration" : 25396
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        }, {
+          "name" : "Удаление выбранных писем",
+          "uid" : "7b95f87080fe5ba5",
+          "parentUid" : "e42d004e0f8a04c639617c8f9ecdf55b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584100551396,
+            "stop" : 1584100601747,
+            "duration" : 50351
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "e42d004e0f8a04c639617c8f9ecdf55b"
+      } ],
+      "uid" : "8f5e1e871ec4a8bc3552cb5866375fd7"
     } ],
     "uid" : "456c76563db8ed5445b741b765693d6a"
   } ]

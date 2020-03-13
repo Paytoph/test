@@ -1,80 +1,110 @@
 [ {
-  "uid" : "55be39085f017656",
-  "name" : "sendTheMessage3",
+  "uid" : "7b95f87080fe5ba5",
+  "name" : "Удаление выбранных писем",
   "time" : {
-    "start" : 1583821703967,
-    "stop" : 1583821705628,
-    "duration" : 1661
+    "start" : 1584100551396,
+    "stop" : 1584100601747,
+    "duration" : 50351
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "554f1508d8ce4218",
-  "name" : "sendTheMessage",
+  "uid" : "1210e3289f003cc0",
+  "name" : "Переключение языка на русский",
   "time" : {
-    "start" : 1583821516182,
-    "stop" : 1583821518682,
-    "duration" : 2500
+    "start" : 1584100331147,
+    "stop" : 1584100333584,
+    "duration" : 2437
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "2844068bbbd37170",
-  "name" : "languageRus",
+  "uid" : "9ad33a85dcabb279",
+  "name" : "Выделение писем",
   "time" : {
-    "start" : 1583821072135,
-    "stop" : 1583821075069,
-    "duration" : 2934
+    "start" : 1584100524563,
+    "stop" : 1584100525512,
+    "duration" : 949
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1c9e02c793e99a39",
-  "name" : "languageEng",
+  "uid" : "b44403d49dc52a9d",
+  "name" : "Отправка письма без указания темы",
   "time" : {
-    "start" : 1583820930190,
-    "stop" : 1583820933303,
-    "duration" : 3113
+    "start" : 1584100189321,
+    "stop" : 1584100193075,
+    "duration" : 3754
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "26027d3524fe56be",
-  "name" : "deletingTwo",
+  "uid" : "ff739b6010151ee4",
+  "name" : "Переключение языка на английский",
   "time" : {
-    "start" : 1583821312219,
-    "stop" : 1583821338715,
-    "duration" : 26496
+    "start" : 1584100327291,
+    "stop" : 1584100330872,
+    "duration" : 3581
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "849bfbfb0a01338d",
-  "name" : "deletingThree",
+  "uid" : "29e4ed1cddb4ae85",
+  "name" : "Отправка письма без указания адреса получателя",
   "time" : {
-    "start" : 1583773459932,
-    "stop" : 1583773460185,
-    "duration" : 253
+    "start" : 1584100188218,
+    "stop" : 1584100189318,
+    "duration" : 1100
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c309e889afa6954",
-  "name" : "sendTheMessage2",
+  "uid" : "b9a475cce4b907b9",
+  "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
   "time" : {
-    "start" : 1583821613922,
-    "stop" : 1583821615480,
-    "duration" : 1558
+    "start" : 1584100194681,
+    "stop" : 1584100197047,
+    "duration" : 2366
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1f5b8c52f93726fe",
-  "name" : "deletingOne",
+  "uid" : "3fb133f7d7fbe6d5",
+  "name" : "Отправка письма без указания адреса получателя и темы",
   "time" : {
-    "start" : 1583821176293,
-    "stop" : 1583821202789,
-    "duration" : 26496
+    "start" : 1584100186400,
+    "stop" : 1584100188214,
+    "duration" : 1814
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "82e2b582323d58b3",
+  "name" : "Отправка письма",
+  "time" : {
+    "start" : 1584100181523,
+    "stop" : 1584100186390,
+    "duration" : 4867
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3a207d2e3bc9435",
+  "name" : "Отправка письма с некорректным адресом получателя (без @)",
+  "time" : {
+    "start" : 1584100193082,
+    "stop" : 1584100194675,
+    "duration" : 1593
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2bc3efb87d1365c9",
+  "name" : "Удаление без выбора писем для удаления",
+  "time" : {
+    "start" : 1584100525984,
+    "stop" : 1584100551380,
+    "duration" : 25396
   },
   "status" : "passed",
   "severity" : "normal"

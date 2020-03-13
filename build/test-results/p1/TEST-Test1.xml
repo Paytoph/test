@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test1" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-10T06:28:23" hostname="acer" time="1.727">
+<testsuite name="Test1" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-03-13T11:55:24" hostname="acer" time="77.679">
   <properties/>
-  <testcase name="sendTheMessage3" classname="Test1" time="1.727"/>
+  <testcase name="activatingCheckboxes" classname="Test1" time="1.439"/>
+  <testcase name="deletingThree" classname="Test1" time="25.396"/>
+  <testcase name="deletingTwo" classname="Test1" time="50.367"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
