@@ -261,5 +261,6 @@ public class Test1 {
         sendingMessageEmail("djeeeelik@yandex");
         fillTheme("Fire");
         clickSendMessageButton();
+        checkError();
     }
 }
