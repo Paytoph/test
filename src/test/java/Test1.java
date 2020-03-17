@@ -70,13 +70,17 @@ public class Test1 {
     @Step("Выбрать язык {language}")
     public void changeLanguage(Language language) {
         String languageName = ym.settingPage().openLanguageButton().getText();
-        if (language.getName().equals(languageName)) {
+        if
+        (language.getTitle().equals(languageName)) {
             logger.info("Язык не меняется");
         } else {
             ym.settingPage().openLanguageButton().click();
-            ym.settingPage().languageButton(language.getTitle()).click();
+            ym.settingPage().languageButton(language.getName())
+                    .waitUntil("ожидание появления списка языков", DisplayedMatcher.displayed(), 5);
+            ym.settingPage().languageButton(language.getName()).click();
         }
     }
+
 
 
     @Step("Проверка языка на {language}")
@@ -95,7 +99,7 @@ public class Test1 {
     public void deletingMessagesTestWithoutClick() {
         ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
                 .waitUntil("", Matchers.iterableWithSize(0), 15);
-        Allure.addAttachment("Проверка удаления писем", "Письма удалились");
+        Allure.addAttachment("Проверка удаления писем", "Нечего удалять");
     }
 
     @Step("Нажатие на кнопку удалить на верхней панели управления письмами")
@@ -107,7 +111,7 @@ public class Test1 {
     public void deletingMessagesTestWithClick() {
         ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
                 .waitUntil("", Matchers.not(Matchers.iterableWithSize(1)), 15);
-        Allure.addAttachment("Проверка не удаленных писем", "Письма не удалились");
+        Allure.addAttachment("Проверка не удаленных писем", "Есть письма,которые надо удалить");
     }
 
     @Step("Проверка активированных чекбоксов")
