@@ -4,7 +4,6 @@ import io.qameta.htmlelements.WebPageFactory;
 import io.qameta.htmlelements.matcher.DisplayedMatcher;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,7 +24,7 @@ public class Test1 {
     private static final Logger logger = LoggerFactory.getLogger(Test1.class);
     ChromeDriver driver;
     WebDriverWait wait;
-    WebPageFactory factory = new WebPageFactory();
+    final WebPageFactory factory = new WebPageFactory();
     YandexMail ym;
 
     @BeforeTest(alwaysRun = true)
@@ -68,37 +67,28 @@ public class Test1 {
         ym.settingPage().openLanguageButton().click();
     }
 
-    @Step("Выбрать язык")
+    @Step("Выбрать язык {language}")
     public void changeLanguage(Language language) {
         String languageName = ym.settingPage().openLanguageButton().getText();
         if (language.getName().equals(languageName)) {
             logger.info("Язык не меняется");
         } else {
-            ym.settingPage().languageButton(language.getName())
-                    .waitUntil("язык не выбрался", DisplayedMatcher.displayed(), 20);
-            ym.settingPage().languageButton(language.getName()).click();
+            ym.settingPage().openLanguageButton().click();
+            ym.settingPage().languageButton(language.getTitle()).click();
         }
     }
 
-    @Step("Проверка языка")
+
+    @Step("Проверка языка на {language}")
     public void switchOverLanguageTest(Language language) {
         ym.settingPage().openLanguageButton()
                 .waitUntil("Проверка не произошла", hasText(language.getTitle()), 25);
+        Assert.assertEquals(ym.settingPage().openLanguageButton().getText(), language.getTitle());
     }
 
     @Step("Активировать все чекбоксы")
     public void activateCheckboxes() {
         ym.lncomingPage().checkBoxes("djeeeelik@yandex.com").forEach(WebElement::click);
-    }
-
-    @Step("Нажать кнопку del на клавиатуре")
-    public void deletingMessages() {
-        ym.lncomingPage().settingButton().sendKeys(Keys.DELETE);
-    }
-
-    @Step("подтвердить удаление")
-    public void proveDeleting() {
-        ym.lncomingPage().proveDeleting().click();
     }
 
     @Step("Проверка того,что письма удалились")
@@ -151,7 +141,7 @@ public class Test1 {
 
     @Step("Проверить, что письмо отправилось")
     public void checkError() {
-        ym.sendMessageDone()
+        ym.sendingMessageDone()
                 .waitUntil("Письмо отправилось", DisplayedMatcher.displayed(), 25);
     }
 

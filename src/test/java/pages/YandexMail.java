@@ -4,7 +4,6 @@ import elements.*;
 import io.qameta.htmlelements.WebPage;
 import io.qameta.htmlelements.annotation.Description;
 import io.qameta.htmlelements.annotation.FindBy;
-import io.qameta.htmlelements.element.ExtendedWebElement;
 import io.qameta.htmlelements.extension.page.BaseUrl;
 
 @BaseUrl("https://mail.yandex.ru")
@@ -50,5 +49,7 @@ public interface YandexMail extends WebPage {
 
     @Description("страница, которая подтверждает отправку сообщения")
     @FindBy("//div[@class='mail-Done-Title js-title-info']")
-    ExtendedWebElement sendMessageDone();
+    SendingMessageDone sendingMessageDone();
+
+
 }

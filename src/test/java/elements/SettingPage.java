@@ -14,11 +14,10 @@ public interface SettingPage
     @FindBy("//span[@class='b-selink__link mail-Settings-Lang']")
     ExtendedWebElement openLanguageButton();
 
+
     // Кнопка выбора английского языка
 
     @Description("Кнопка смены языка, так же показывает текущий язык")
     @FindBy("//a[contains(@data-params, '{{ language }}')]")
     ExtendedWebElement languageButton(@Param("language") String language);
-
-
 }

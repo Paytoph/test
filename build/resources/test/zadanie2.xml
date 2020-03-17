@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Тесты от Сергея">
+<suite name="Тесты от Сергея" thread-count="3" parallel="tests">
+    <test name="Модуль работы с языками">
+        <groups>
+            <run>
+                <include name="YA-1.1"/>
+                <include name="YA-1.2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test1"/>
+        </classes>
+    </test>
     <test name="Модуль работы с входящими письмами">
         <groups>
             <run>
@@ -13,4 +24,21 @@
             <class name="Test1"/>
         </classes>
     </test>
+    <test name="Модуль работы с отправлением писем">
+        <groups>
+            <run>
+                <include name="YA-5"/>
+                <include name="YA-6.1"/>
+                <include name="YA-6.2"/>
+                <include name="YA-6.3"/>
+                <include name="YA-6.4.1"/>
+                <include name="YA-6.4.2"/>
+                <include name="YA-6.4.3"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test1"/>
+        </classes>
+    </test>
 </suite>
+

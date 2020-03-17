@@ -1,5 +1,105 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "язык не выбрался\nExpected: element is displayed\n     but: element <{name: Кнопка смены языка, так же показывает текущий язык}> is not displayed\nBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'\nSystem info: host: 'ACER', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_241'\nDriver info: driver.version: unknown",
+      "children" : [ {
+        "name" : "Переключение языка на английский",
+        "uid" : "dabba1eb4a15aa7d",
+        "parentUid" : "c356937c788cb3bcc59d174a9b3095e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584429511936,
+          "stop" : 1584429540558,
+          "duration" : 28622
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c356937c788cb3bcc59d174a9b3095e1"
+    }, {
+      "name" : "\nExpected: \n     but: was <{name: Чекбокcы от меня}>\nBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'\nSystem info: host: 'ACER', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_241'\nDriver info: driver.version: unknown",
+      "children" : [ {
+        "name" : "Выделение писем",
+        "uid" : "e797be35acf71f9f",
+        "parentUid" : "83c223d465173807ff52e1838ace964c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584429513707,
+          "stop" : 1584429564975,
+          "duration" : 51268
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "83c223d465173807ff52e1838ace964c"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected [Please enter at least one email address.] but found [Поле не заполнено. Необходимо ввести адрес.]",
+      "children" : [ {
+        "name" : "Отправка письма без указания адреса получателя и темы",
+        "uid" : "808d5684a8f3b810",
+        "parentUid" : "6cdddf9be1327eb0f8667ffba6767a04",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429518473,
+          "stop" : 1584429521086,
+          "duration" : 2613
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Отправка письма без указания адреса получателя",
+        "uid" : "881741159daa3b54",
+        "parentUid" : "6cdddf9be1327eb0f8667ffba6767a04",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429521119,
+          "stop" : 1584429522392,
+          "duration" : 1273
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6cdddf9be1327eb0f8667ffba6767a04"
+    }, {
+      "name" : "expected [Invalid email addresses: djeeeelikyandex.ru] but found [Некорректные адреса: djeeeelikyandex.ru]",
+      "children" : [ {
+        "name" : "Отправка письма с некорректным адресом получателя (без @)",
+        "uid" : "27212b612d1f957b",
+        "parentUid" : "0026d5bca888f5153d7bbb80fb04eb2e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429527203,
+          "stop" : 1584429528901,
+          "duration" : 1698
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0026d5bca888f5153d7bbb80fb04eb2e"
+    }, {
+      "name" : "expected [Invalid email addresses: djeeeelik@@yandex.ru] but found [Некорректные адреса: djeeeelik@@yandex.ru]",
+      "children" : [ {
+        "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
+        "uid" : "109b50cd74283f5a",
+        "parentUid" : "9ea9f908bfc363a2ce9e9fdd9cf09648",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429528908,
+          "stop" : 1584429531731,
+          "duration" : 2823
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9ea9f908bfc363a2ce9e9fdd9cf09648"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

@@ -4,149 +4,149 @@
   "children" : [ {
     "name" : "acer",
     "children" : [ {
-      "name" : "15308@acer.Test worker(11)",
+      "name" : "6744@acer.TestNG-tests-3(16)",
       "children" : [ {
-        "name" : "Удаление выбранных писем",
-        "uid" : "7b95f87080fe5ba5",
-        "parentUid" : "4dab21ee42fec6c1e72b97c2a558a9a1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100551396,
-          "stop" : 1584100601747,
-          "duration" : 50351
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "Выделение писем",
-        "uid" : "9ad33a85dcabb279",
-        "parentUid" : "4dab21ee42fec6c1e72b97c2a558a9a1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100524563,
-          "stop" : 1584100525512,
-          "duration" : 949
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "Удаление без выбора писем для удаления",
-        "uid" : "2bc3efb87d1365c9",
-        "parentUid" : "4dab21ee42fec6c1e72b97c2a558a9a1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100525984,
-          "stop" : 1584100551380,
-          "duration" : 25396
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4dab21ee42fec6c1e72b97c2a558a9a1"
-    }, {
-      "name" : "6632@acer.Test worker(11)",
-      "children" : [ {
-        "name" : "Переключение языка на русский",
-        "uid" : "1210e3289f003cc0",
-        "parentUid" : "7d8ba0ba476c937bce1bde7f6b51acfa",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100331147,
-          "stop" : 1584100333584,
-          "duration" : 2437
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Переключение языка на английский",
-        "uid" : "ff739b6010151ee4",
-        "parentUid" : "7d8ba0ba476c937bce1bde7f6b51acfa",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100327291,
-          "stop" : 1584100330872,
-          "duration" : 3581
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7d8ba0ba476c937bce1bde7f6b51acfa"
-    }, {
-      "name" : "12624@acer.Test worker(11)",
-      "children" : [ {
-        "name" : "Отправка письма без указания темы",
-        "uid" : "b44403d49dc52a9d",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100189321,
-          "stop" : 1584100193075,
-          "duration" : 3754
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Отправка письма без указания адреса получателя",
-        "uid" : "29e4ed1cddb4ae85",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584100188218,
-          "stop" : 1584100189318,
-          "duration" : 1100
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
-        "uid" : "b9a475cce4b907b9",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
-        "status" : "passed",
+        "uid" : "109b50cd74283f5a",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
+        "status" : "failed",
         "time" : {
-          "start" : 1584100194681,
-          "stop" : 1584100197047,
-          "duration" : 2366
+          "start" : 1584429528908,
+          "stop" : 1584429531731,
+          "duration" : 2823
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Отправка письма без указания адреса получателя и темы",
-        "uid" : "3fb133f7d7fbe6d5",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
-        "status" : "passed",
+        "uid" : "808d5684a8f3b810",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
+        "status" : "failed",
         "time" : {
-          "start" : 1584100186400,
-          "stop" : 1584100188214,
-          "duration" : 1814
+          "start" : 1584429518473,
+          "stop" : 1584429521086,
+          "duration" : 2613
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Отправка письма",
-        "uid" : "82e2b582323d58b3",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
+        "name" : "Отправка письма без указания темы",
+        "uid" : "2f07eef7c6b50195",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
         "status" : "passed",
         "time" : {
-          "start" : 1584100181523,
-          "stop" : 1584100186390,
-          "duration" : 4867
+          "start" : 1584429522395,
+          "stop" : 1584429527190,
+          "duration" : 4795
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Отправка письма без указания адреса получателя",
+        "uid" : "881741159daa3b54",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429521119,
+          "stop" : 1584429522392,
+          "duration" : 1273
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Отправка письма с некорректным адресом получателя (без @)",
-        "uid" : "a3a207d2e3bc9435",
-        "parentUid" : "3a182c3651497588ba32417f33779967",
+        "uid" : "27212b612d1f957b",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584429527203,
+          "stop" : 1584429528901,
+          "duration" : 1698
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Отправка письма",
+        "uid" : "1500e87e78df1692",
+        "parentUid" : "e3ac1530ed46e1cc510ca8b09bcde928",
         "status" : "passed",
         "time" : {
-          "start" : 1584100193082,
-          "stop" : 1584100194675,
-          "duration" : 1593
+          "start" : 1584429510932,
+          "stop" : 1584429518053,
+          "duration" : 7121
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "3a182c3651497588ba32417f33779967"
+      "uid" : "e3ac1530ed46e1cc510ca8b09bcde928"
+    }, {
+      "name" : "6744@acer.TestNG-tests-2(15)",
+      "children" : [ {
+        "name" : "Удаление выбранных писем",
+        "uid" : "106ae3b863d1fb15",
+        "parentUid" : "ba336ea684579abfb94aef1f1af434e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584429590254,
+          "stop" : 1584429620976,
+          "duration" : 30722
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Выделение писем",
+        "uid" : "e797be35acf71f9f",
+        "parentUid" : "ba336ea684579abfb94aef1f1af434e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584429513707,
+          "stop" : 1584429564975,
+          "duration" : 51268
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Удаление без выбора писем для удаления",
+        "uid" : "8dccd2d9716e473a",
+        "parentUid" : "ba336ea684579abfb94aef1f1af434e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584429565023,
+          "stop" : 1584429590248,
+          "duration" : 25225
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ba336ea684579abfb94aef1f1af434e3"
+    }, {
+      "name" : "6744@acer.TestNG-tests-1(14)",
+      "children" : [ {
+        "name" : "Переключение языка на русский",
+        "uid" : "b58ee0ed79c6936f",
+        "parentUid" : "028caee0d144ea774f08217999da136a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584429540585,
+          "stop" : 1584429545080,
+          "duration" : 4495
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Переключение языка на английский",
+        "uid" : "dabba1eb4a15aa7d",
+        "parentUid" : "028caee0d144ea774f08217999da136a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584429511936,
+          "stop" : 1584429540558,
+          "duration" : 28622
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "028caee0d144ea774f08217999da136a"
     } ],
     "uid" : "06de9290609f88c13854c863a3acf6b9"
   } ]
