@@ -3,133 +3,133 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "Отправка письма",
-    "uid" : "1500e87e78df1692",
+    "uid" : "fae57d61ae53c255",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1584429510932,
-      "stop" : 1584429518053,
-      "duration" : 7121
+      "start" : 1584695492400,
+      "stop" : 1584695511796,
+      "duration" : 19396
     },
     "flaky" : false,
     "parameters" : [ ]
   }, {
     "name" : "Переключение языка на английский",
-    "uid" : "dabba1eb4a15aa7d",
+    "uid" : "d8ea4ea6d5289eee",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "broken",
+    "status" : "passed",
     "time" : {
-      "start" : 1584429511936,
-      "stop" : 1584429540558,
-      "duration" : 28622
+      "start" : 1584695497318,
+      "stop" : 1584695531274,
+      "duration" : 33956
     },
     "flaky" : false,
     "parameters" : [ ]
   }, {
     "name" : "Выделение писем",
-    "uid" : "e797be35acf71f9f",
+    "uid" : "7ceb3c32cf1f4551",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "broken",
+    "status" : "passed",
     "time" : {
-      "start" : 1584429513707,
-      "stop" : 1584429564975,
-      "duration" : 51268
+      "start" : 1584695504954,
+      "stop" : 1584695518977,
+      "duration" : 14023
     },
     "flaky" : false,
     "parameters" : [ ]
   }, {
     "name" : "Отправка письма без указания адреса получателя и темы",
-    "uid" : "808d5684a8f3b810",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1584429518473,
-      "stop" : 1584429521086,
-      "duration" : 2613
-    },
-    "flaky" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Отправка письма без указания адреса получателя",
-    "uid" : "881741159daa3b54",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1584429521119,
-      "stop" : 1584429522392,
-      "duration" : 1273
-    },
-    "flaky" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Отправка письма без указания темы",
-    "uid" : "2f07eef7c6b50195",
+    "uid" : "61094db15a78c689",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1584429522395,
-      "stop" : 1584429527190,
-      "duration" : 4795
-    },
-    "flaky" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Отправка письма с некорректным адресом получателя (без @)",
-    "uid" : "27212b612d1f957b",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1584429527203,
-      "stop" : 1584429528901,
-      "duration" : 1698
-    },
-    "flaky" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
-    "uid" : "109b50cd74283f5a",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1584429528908,
-      "stop" : 1584429531731,
-      "duration" : 2823
-    },
-    "flaky" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Переключение языка на русский",
-    "uid" : "b58ee0ed79c6936f",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1584429540585,
-      "stop" : 1584429545080,
-      "duration" : 4495
+      "start" : 1584695512369,
+      "stop" : 1584695519106,
+      "duration" : 6737
     },
     "flaky" : false,
     "parameters" : [ ]
   }, {
     "name" : "Удаление без выбора писем для удаления",
-    "uid" : "8dccd2d9716e473a",
+    "uid" : "a3dcf832fc6c05a8",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1584429565023,
-      "stop" : 1584429590248,
-      "duration" : 25225
+      "start" : 1584695519063,
+      "stop" : 1584695555980,
+      "duration" : 36917
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Отправка письма без указания адреса получателя",
+    "uid" : "264509c0c40f6926",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1584695519114,
+      "stop" : 1584695531754,
+      "duration" : 12640
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Переключение языка на русский",
+    "uid" : "9ba826442ea62e48",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1584695531281,
+      "stop" : 1584695537632,
+      "duration" : 6351
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Отправка письма без указания темы",
+    "uid" : "87f156b27019b600",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1584695531759,
+      "stop" : 1584695537372,
+      "duration" : 5613
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Отправка письма с некорректным адресом получателя (без @)",
+    "uid" : "864ebe42482de5c2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1584695537387,
+      "stop" : 1584695539513,
+      "duration" : 2126
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
+    "uid" : "a6b651d0cd014b61",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1584695539519,
+      "stop" : 1584695550992,
+      "duration" : 11473
     },
     "flaky" : false,
     "parameters" : [ ]
   }, {
     "name" : "Удаление выбранных писем",
-    "uid" : "106ae3b863d1fb15",
+    "uid" : "249f50601bc746f5",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1584429590254,
-      "stop" : 1584429620976,
-      "duration" : 30722
+      "start" : 1584695555984,
+      "stop" : 1584695606226,
+      "duration" : 50242
     },
     "flaky" : false,
     "parameters" : [ ]

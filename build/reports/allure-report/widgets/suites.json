@@ -4,10 +4,10 @@
     "uid" : "456c76563db8ed5445b741b765693d6a",
     "name" : "Тесты от Сергея",
     "statistic" : {
-      "failed" : 4,
-      "broken" : 2,
+      "failed" : 0,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 11,
       "unknown" : 0,
       "total" : 11
     }

@@ -1,111 +1,111 @@
 [ {
-  "uid" : "27212b612d1f957b",
-  "name" : "Отправка письма с некорректным адресом получателя (без @)",
-  "time" : {
-    "start" : 1584429527203,
-    "stop" : 1584429528901,
-    "duration" : 1698
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "b58ee0ed79c6936f",
-  "name" : "Переключение языка на русский",
-  "time" : {
-    "start" : 1584429540585,
-    "stop" : 1584429545080,
-    "duration" : 4495
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2f07eef7c6b50195",
-  "name" : "Отправка письма без указания темы",
-  "time" : {
-    "start" : 1584429522395,
-    "stop" : 1584429527190,
-    "duration" : 4795
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1500e87e78df1692",
-  "name" : "Отправка письма",
-  "time" : {
-    "start" : 1584429510932,
-    "stop" : 1584429518053,
-    "duration" : 7121
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "881741159daa3b54",
-  "name" : "Отправка письма без указания адреса получателя",
-  "time" : {
-    "start" : 1584429521119,
-    "stop" : 1584429522392,
-    "duration" : 1273
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "8dccd2d9716e473a",
-  "name" : "Удаление без выбора писем для удаления",
-  "time" : {
-    "start" : 1584429565023,
-    "stop" : 1584429590248,
-    "duration" : 25225
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "106ae3b863d1fb15",
+  "uid" : "249f50601bc746f5",
   "name" : "Удаление выбранных писем",
   "time" : {
-    "start" : 1584429590254,
-    "stop" : 1584429620976,
-    "duration" : 30722
+    "start" : 1584695555984,
+    "stop" : 1584695606226,
+    "duration" : 50242
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "dabba1eb4a15aa7d",
-  "name" : "Переключение языка на английский",
+  "uid" : "264509c0c40f6926",
+  "name" : "Отправка письма без указания адреса получателя",
   "time" : {
-    "start" : 1584429511936,
-    "stop" : 1584429540558,
-    "duration" : 28622
+    "start" : 1584695519114,
+    "stop" : 1584695531754,
+    "duration" : 12640
   },
-  "status" : "broken",
+  "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e797be35acf71f9f",
-  "name" : "Выделение писем",
+  "uid" : "864ebe42482de5c2",
+  "name" : "Отправка письма с некорректным адресом получателя (без @)",
   "time" : {
-    "start" : 1584429513707,
-    "stop" : 1584429564975,
-    "duration" : 51268
+    "start" : 1584695537387,
+    "stop" : 1584695539513,
+    "duration" : 2126
   },
-  "status" : "broken",
+  "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "808d5684a8f3b810",
+  "uid" : "61094db15a78c689",
   "name" : "Отправка письма без указания адреса получателя и темы",
   "time" : {
-    "start" : 1584429518473,
-    "stop" : 1584429521086,
-    "duration" : 2613
+    "start" : 1584695512369,
+    "stop" : 1584695519106,
+    "duration" : 6737
   },
-  "status" : "failed",
+  "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "109b50cd74283f5a",
+  "uid" : "a6b651d0cd014b61",
   "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
   "time" : {
-    "start" : 1584429528908,
-    "stop" : 1584429531731,
-    "duration" : 2823
+    "start" : 1584695539519,
+    "stop" : 1584695550992,
+    "duration" : 11473
   },
-  "status" : "failed",
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8ea4ea6d5289eee",
+  "name" : "Переключение языка на английский",
+  "time" : {
+    "start" : 1584695497318,
+    "stop" : 1584695531274,
+    "duration" : 33956
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ceb3c32cf1f4551",
+  "name" : "Выделение писем",
+  "time" : {
+    "start" : 1584695504954,
+    "stop" : 1584695518977,
+    "duration" : 14023
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fae57d61ae53c255",
+  "name" : "Отправка письма",
+  "time" : {
+    "start" : 1584695492400,
+    "stop" : 1584695511796,
+    "duration" : 19396
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ba826442ea62e48",
+  "name" : "Переключение языка на русский",
+  "time" : {
+    "start" : 1584695531281,
+    "stop" : 1584695537632,
+    "duration" : 6351
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87f156b27019b600",
+  "name" : "Отправка письма без указания темы",
+  "time" : {
+    "start" : 1584695531759,
+    "stop" : 1584695537372,
+    "duration" : 5613
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3dcf832fc6c05a8",
+  "name" : "Удаление без выбора писем для удаления",
+  "time" : {
+    "start" : 1584695519063,
+    "stop" : 1584695555980,
+    "duration" : 36917
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

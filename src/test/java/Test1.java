@@ -74,10 +74,10 @@ public class Test1 {
         (language.getTitle().equals(languageName)) {
             logger.info("Язык не меняется");
         } else {
-            ym.settingPage().openLanguageButton().click();
             ym.settingPage().languageButton(language.getName())
-                    .waitUntil("ожидание появления списка языков", DisplayedMatcher.displayed(), 5);
+                    .waitUntil("ожидание появления списка языков", DisplayedMatcher.displayed(), 25);
             ym.settingPage().languageButton(language.getName()).click();
+            logger.info("Язык успешно сменен на: " + languageName);
         }
     }
 
@@ -100,6 +100,7 @@ public class Test1 {
         ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
                 .waitUntil("", Matchers.iterableWithSize(0), 15);
         Allure.addAttachment("Проверка удаления писем", "Нечего удалять");
+        logger.info("Письма удалились");
     }
 
     @Step("Нажатие на кнопку удалить на верхней панели управления письмами")
@@ -112,6 +113,7 @@ public class Test1 {
         ym.lncomingPage().checkBoxes("djeeeelik@yandex.com")
                 .waitUntil("", Matchers.not(Matchers.iterableWithSize(1)), 15);
         Allure.addAttachment("Проверка не удаленных писем", "Есть письма,которые надо удалить");
+        logger.info("Письма не удалились");
     }
 
     @Step("Проверка активированных чекбоксов")
@@ -147,6 +149,7 @@ public class Test1 {
     public void checkError() {
         ym.sendingMessageDone()
                 .waitUntil("Письмо отправилось", DisplayedMatcher.displayed(), 25);
+        logger.info("Сообщение успешно отправлено");
     }
 
     @Step("Проверить, что появилась ошибка")
@@ -154,8 +157,10 @@ public class Test1 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
         String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
         if (thereWasAnError) {
+            logger.info("Адрес отсутствует");
             Assert.assertEquals("Поле не заполнено. Необходимо ввести адрес.", message);
         } else {
+            logger.info("Некорректный адрес");
             Assert.assertEquals("Некорректные адреса: " + email, message);
         }
     }

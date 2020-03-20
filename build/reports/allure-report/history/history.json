@@ -1,44 +1,4 @@
 {
-  "bfaec64eae9dba63de0137ba19487e1f" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "27212b612d1f957b",
-      "status" : "failed",
-      "statusDetails" : "expected [Invalid email addresses: djeeeelikyandex.ru] but found [Некорректные адреса: djeeeelikyandex.ru]",
-      "time" : {
-        "start" : 1584429527203,
-        "stop" : 1584429528901,
-        "duration" : 1698
-      }
-    } ]
-  },
-  "758b5586ee8becd4720207dd81c41fdb" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "e797be35acf71f9f",
-      "status" : "broken",
-      "statusDetails" : "\nExpected: \n     but: was <{name: Чекбокcы от меня}>\nBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'\nSystem info: host: 'ACER', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_241'\nDriver info: driver.version: unknown",
-      "time" : {
-        "start" : 1584429513707,
-        "stop" : 1584429564975,
-        "duration" : 51268
-      }
-    } ]
-  },
   "e3e4b0d6d12baf3c7cb9c4152ea69236" : {
     "statistic" : {
       "failed" : 0,
@@ -49,12 +9,50 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2f07eef7c6b50195",
+      "uid" : "87f156b27019b600",
       "status" : "passed",
       "time" : {
-        "start" : 1584429522395,
-        "stop" : 1584429527190,
-        "duration" : 4795
+        "start" : 1584695531759,
+        "stop" : 1584695537372,
+        "duration" : 5613
+      }
+    } ]
+  },
+  "bfaec64eae9dba63de0137ba19487e1f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "864ebe42482de5c2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584695537387,
+        "stop" : 1584695539513,
+        "duration" : 2126
+      }
+    } ]
+  },
+  "758b5586ee8becd4720207dd81c41fdb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7ceb3c32cf1f4551",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584695504954,
+        "stop" : 1584695518977,
+        "duration" : 14023
       }
     } ]
   },
@@ -68,32 +66,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b58ee0ed79c6936f",
+      "uid" : "9ba826442ea62e48",
       "status" : "passed",
       "time" : {
-        "start" : 1584429540585,
-        "stop" : 1584429545080,
-        "duration" : 4495
+        "start" : 1584695531281,
+        "stop" : 1584695537632,
+        "duration" : 6351
       }
     } ]
   },
   "ffe50a8a4f15f19e7300c069929224a7" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "109b50cd74283f5a",
-      "status" : "failed",
-      "statusDetails" : "expected [Invalid email addresses: djeeeelik@@yandex.ru] but found [Некорректные адреса: djeeeelik@@yandex.ru]",
+      "uid" : "a6b651d0cd014b61",
+      "status" : "passed",
       "time" : {
-        "start" : 1584429528908,
-        "stop" : 1584429531731,
-        "duration" : 2823
+        "start" : 1584695539519,
+        "stop" : 1584695550992,
+        "duration" : 11473
       }
     } ]
   },
@@ -107,32 +104,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8dccd2d9716e473a",
+      "uid" : "a3dcf832fc6c05a8",
       "status" : "passed",
       "time" : {
-        "start" : 1584429565023,
-        "stop" : 1584429590248,
-        "duration" : 25225
+        "start" : 1584695519063,
+        "stop" : 1584695555980,
+        "duration" : 36917
       }
     } ]
   },
   "e3af6b38a99468352496ef697da4b970" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "808d5684a8f3b810",
-      "status" : "failed",
-      "statusDetails" : "expected [Please enter at least one email address.] but found [Поле не заполнено. Необходимо ввести адрес.]",
+      "uid" : "61094db15a78c689",
+      "status" : "passed",
       "time" : {
-        "start" : 1584429518473,
-        "stop" : 1584429521086,
-        "duration" : 2613
+        "start" : 1584695512369,
+        "stop" : 1584695519106,
+        "duration" : 6737
       }
     } ]
   },
@@ -146,52 +142,50 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "1500e87e78df1692",
+      "uid" : "fae57d61ae53c255",
       "status" : "passed",
       "time" : {
-        "start" : 1584429510932,
-        "stop" : 1584429518053,
-        "duration" : 7121
+        "start" : 1584695492400,
+        "stop" : 1584695511796,
+        "duration" : 19396
       }
     } ]
   },
   "901c057f4f549e068752cdffac2888e6" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "881741159daa3b54",
-      "status" : "failed",
-      "statusDetails" : "expected [Please enter at least one email address.] but found [Поле не заполнено. Необходимо ввести адрес.]",
+      "uid" : "264509c0c40f6926",
+      "status" : "passed",
       "time" : {
-        "start" : 1584429521119,
-        "stop" : 1584429522392,
-        "duration" : 1273
+        "start" : 1584695519114,
+        "stop" : 1584695531754,
+        "duration" : 12640
       }
     } ]
   },
   "9fe3a67752adf01d3746259c377c27e" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "dabba1eb4a15aa7d",
-      "status" : "broken",
-      "statusDetails" : "язык не выбрался\nExpected: element is displayed\n     but: element <{name: Кнопка смены языка, так же показывает текущий язык}> is not displayed\nBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'\nSystem info: host: 'ACER', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_241'\nDriver info: driver.version: unknown",
+      "uid" : "d8ea4ea6d5289eee",
+      "status" : "passed",
       "time" : {
-        "start" : 1584429511936,
-        "stop" : 1584429540558,
-        "duration" : 28622
+        "start" : 1584695497318,
+        "stop" : 1584695531274,
+        "duration" : 33956
       }
     } ]
   },
@@ -205,12 +199,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "106ae3b863d1fb15",
+      "uid" : "249f50601bc746f5",
       "status" : "passed",
       "time" : {
-        "start" : 1584429590254,
-        "stop" : 1584429620976,
-        "duration" : 30722
+        "start" : 1584695555984,
+        "stop" : 1584695606226,
+        "duration" : 50242
       }
     } ]
   }
