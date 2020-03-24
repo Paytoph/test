@@ -5,133 +5,133 @@
     "name" : "Test1",
     "children" : [ {
       "name" : "sendTheMessage",
-      "uid" : "fae57d61ae53c255",
+      "uid" : "7dae1b0ffcce1601",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695492400,
-        "stop" : 1584695511796,
-        "duration" : 19396
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "languageEng",
-      "uid" : "d8ea4ea6d5289eee",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1584695497318,
-        "stop" : 1584695531274,
-        "duration" : 33956
+        "start" : 1585072343081,
+        "stop" : 1585072356514,
+        "duration" : 13433
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "activatingCheckboxes",
-      "uid" : "7ceb3c32cf1f4551",
+      "uid" : "30a14721aa067a9e",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "failed",
+      "time" : {
+        "start" : 1585072345500,
+        "stop" : 1585072371418,
+        "duration" : 25918
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "languageEng",
+      "uid" : "1395c84330f5f4c1",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695504954,
-        "stop" : 1584695518977,
-        "duration" : 14023
+        "start" : 1585072347109,
+        "stop" : 1585072359679,
+        "duration" : 12570
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "sendTheMessage3",
-      "uid" : "61094db15a78c689",
+      "uid" : "a60a223e211efa1f",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695512369,
-        "stop" : 1584695519106,
-        "duration" : 6737
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "deletingThree",
-      "uid" : "a3dcf832fc6c05a8",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1584695519063,
-        "stop" : 1584695555980,
-        "duration" : 36917
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "sendTheMessage4",
-      "uid" : "264509c0c40f6926",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1584695519114,
-        "stop" : 1584695531754,
-        "duration" : 12640
+        "start" : 1585072357320,
+        "stop" : 1585072360001,
+        "duration" : 2681
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "languageRus",
-      "uid" : "9ba826442ea62e48",
+      "uid" : "6f0d74601815db56",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695531281,
-        "stop" : 1584695537632,
-        "duration" : 6351
+        "start" : 1585072359932,
+        "stop" : 1585072367968,
+        "duration" : 8036
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage4",
+      "uid" : "58670960f1ef994b",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585072360007,
+        "stop" : 1585072362959,
+        "duration" : 2952
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "sendTheMessage5",
-      "uid" : "87f156b27019b600",
+      "uid" : "e84a72eaa2971b04",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695531759,
-        "stop" : 1584695537372,
-        "duration" : 5613
+        "start" : 1585072362965,
+        "stop" : 1585072367612,
+        "duration" : 4647
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "sendTheMessage6",
-      "uid" : "864ebe42482de5c2",
+      "uid" : "82c6a7721d92a300",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695537387,
-        "stop" : 1584695539513,
-        "duration" : 2126
+        "start" : 1585072367615,
+        "stop" : 1585072370949,
+        "duration" : 3334
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "sendTheMessage7",
-      "uid" : "a6b651d0cd014b61",
+      "uid" : "ba841ee2fd51d44",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695539519,
-        "stop" : 1584695550992,
-        "duration" : 11473
+        "start" : 1585072370954,
+        "stop" : 1585072375850,
+        "duration" : 4896
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "deletingThree",
+      "uid" : "55a6682018cd0bca",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585072371424,
+        "stop" : 1585072372241,
+        "duration" : 817
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "deletingTwo",
-      "uid" : "249f50601bc746f5",
+      "uid" : "8b5ee73db8e07bbe",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1584695555984,
-        "stop" : 1584695606226,
-        "duration" : 50242
+        "start" : 1585072372248,
+        "stop" : 1585072374677,
+        "duration" : 2429
       },
       "flaky" : false,
       "parameters" : [ ]

@@ -1,0 +1,51 @@
+{
+  "uuid": "caf0950d-70b7-4751-a8e7-dfc0807ebe30",
+  "historyId": "a2bc0d3c7b353cb151c911e68138600b",
+  "fullName": "Test1.languageRus",
+  "labels": [
+    {
+      "name": "package",
+      "value": "Test1"
+    },
+    {
+      "name": "testClass",
+      "value": "Test1"
+    },
+    {
+      "name": "testMethod",
+      "value": "languageRus"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "untitled"
+    },
+    {
+      "name": "subSuite",
+      "value": "Test1"
+    },
+    {
+      "name": "host",
+      "value": "acer"
+    },
+    {
+      "name": "thread",
+      "value": "6384@acer.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "languageRus",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1583260468956,
+  "stop": 1583260470460,
+  "parameters": []
+}

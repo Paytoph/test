@@ -1,0 +1,146 @@
+{
+  "uid" : "6f0d74601815db56",
+  "name" : "Переключение языка на русский",
+  "fullName" : "Test1.languageRus",
+  "historyId" : "a2bc0d3c7b353cb151c911e68138600b",
+  "time" : {
+    "start" : 1585072359932,
+    "stop" : 1585072367968,
+    "duration" : 8036
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585072309211,
+      "stop" : 1585072347106,
+      "duration" : 37895
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Нажать на кнопку 'Все настройки'",
+      "time" : {
+        "start" : 1585072359932,
+        "stop" : 1585072360667,
+        "duration" : 735
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Открыть меню раскрытия языка",
+      "time" : {
+        "start" : 1585072360667,
+        "stop" : 1585072360948,
+        "duration" : 281
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Выбрать язык RUS",
+      "time" : {
+        "start" : 1585072360948,
+        "stop" : 1585072361212,
+        "duration" : 264
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "language",
+        "value" : "RUS"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Проверка языка на RUS",
+      "time" : {
+        "start" : 1585072361213,
+        "stop" : 1585072367968,
+        "duration" : 6755
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "language",
+        "value" : "RUS"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "languageRus"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с языками"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "9100@acer.TestNG-tests-1(14)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6f0d74601815db56.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,51 @@
+{
+  "uuid": "33618b3e-8b3c-40c4-b117-978b3f7c6c34",
+  "historyId": "44614513a3d68205508cdbc1a7e01e03",
+  "fullName": "Test1.deletingTwo",
+  "labels": [
+    {
+      "name": "package",
+      "value": "Test1"
+    },
+    {
+      "name": "testClass",
+      "value": "Test1"
+    },
+    {
+      "name": "testMethod",
+      "value": "deletingTwo"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "untitled"
+    },
+    {
+      "name": "subSuite",
+      "value": "Test1"
+    },
+    {
+      "name": "host",
+      "value": "acer"
+    },
+    {
+      "name": "thread",
+      "value": "5252@acer.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "deletingTwo",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1583324940096,
+  "stop": 1583324940765,
+  "parameters": []
+}

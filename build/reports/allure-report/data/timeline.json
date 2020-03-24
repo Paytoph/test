@@ -4,149 +4,149 @@
   "children" : [ {
     "name" : "acer",
     "children" : [ {
-      "name" : "7784@acer.TestNG-tests-1(14)",
-      "children" : [ {
-        "name" : "Переключение языка на английский",
-        "uid" : "d8ea4ea6d5289eee",
-        "parentUid" : "564e81eed3e138d707de9e7722cf34a2",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584695497318,
-          "stop" : 1584695531274,
-          "duration" : 33956
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Переключение языка на русский",
-        "uid" : "9ba826442ea62e48",
-        "parentUid" : "564e81eed3e138d707de9e7722cf34a2",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584695531281,
-          "stop" : 1584695537632,
-          "duration" : 6351
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "564e81eed3e138d707de9e7722cf34a2"
-    }, {
-      "name" : "7784@acer.TestNG-tests-2(15)",
+      "name" : "9100@acer.TestNG-tests-2(15)",
       "children" : [ {
         "name" : "Выделение писем",
-        "uid" : "7ceb3c32cf1f4551",
-        "parentUid" : "f1e5ba313a3cc55217c7176c11bed406",
-        "status" : "passed",
+        "uid" : "30a14721aa067a9e",
+        "parentUid" : "5399b76345b4a67d91362a20de57f7fa",
+        "status" : "failed",
         "time" : {
-          "start" : 1584695504954,
-          "stop" : 1584695518977,
-          "duration" : 14023
+          "start" : 1585072345500,
+          "stop" : 1585072371418,
+          "duration" : 25918
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Удаление без выбора писем для удаления",
-        "uid" : "a3dcf832fc6c05a8",
-        "parentUid" : "f1e5ba313a3cc55217c7176c11bed406",
+        "uid" : "55a6682018cd0bca",
+        "parentUid" : "5399b76345b4a67d91362a20de57f7fa",
         "status" : "passed",
         "time" : {
-          "start" : 1584695519063,
-          "stop" : 1584695555980,
-          "duration" : 36917
+          "start" : 1585072371424,
+          "stop" : 1585072372241,
+          "duration" : 817
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Удаление выбранных писем",
-        "uid" : "249f50601bc746f5",
-        "parentUid" : "f1e5ba313a3cc55217c7176c11bed406",
+        "uid" : "8b5ee73db8e07bbe",
+        "parentUid" : "5399b76345b4a67d91362a20de57f7fa",
         "status" : "passed",
         "time" : {
-          "start" : 1584695555984,
-          "stop" : 1584695606226,
-          "duration" : 50242
+          "start" : 1585072372248,
+          "stop" : 1585072374677,
+          "duration" : 2429
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f1e5ba313a3cc55217c7176c11bed406"
+      "uid" : "5399b76345b4a67d91362a20de57f7fa"
     }, {
-      "name" : "7784@acer.TestNG-tests-3(16)",
+      "name" : "9100@acer.TestNG-tests-3(16)",
       "children" : [ {
-        "name" : "Отправка письма без указания адреса получателя и темы",
-        "uid" : "61094db15a78c689",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584695512369,
-          "stop" : 1584695519106,
-          "duration" : 6737
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
-        "uid" : "a6b651d0cd014b61",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1584695539519,
-          "stop" : 1584695550992,
-          "duration" : 11473
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Отправка письма без указания адреса получателя",
-        "uid" : "264509c0c40f6926",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
+        "uid" : "58670960f1ef994b",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
         "status" : "passed",
         "time" : {
-          "start" : 1584695519114,
-          "stop" : 1584695531754,
-          "duration" : 12640
+          "start" : 1585072360007,
+          "stop" : 1585072362959,
+          "duration" : 2952
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Отправка письма с некорректным адресом получателя (без @)",
-        "uid" : "864ebe42482de5c2",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
+        "name" : "Отправка письма без указания адреса получателя и темы",
+        "uid" : "a60a223e211efa1f",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
         "status" : "passed",
         "time" : {
-          "start" : 1584695537387,
-          "stop" : 1584695539513,
-          "duration" : 2126
+          "start" : 1585072357320,
+          "stop" : 1585072360001,
+          "duration" : 2681
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Отправка письма без указания темы",
-        "uid" : "87f156b27019b600",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
+        "uid" : "e84a72eaa2971b04",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
         "status" : "passed",
         "time" : {
-          "start" : 1584695531759,
-          "stop" : 1584695537372,
-          "duration" : 5613
+          "start" : 1585072362965,
+          "stop" : 1585072367612,
+          "duration" : 4647
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Отправка письма с некорректным адресом получателя (без @)",
+        "uid" : "82c6a7721d92a300",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585072367615,
+          "stop" : 1585072370949,
+          "duration" : 3334
         },
         "flaky" : false,
         "parameters" : [ ]
       }, {
         "name" : "Отправка письма",
-        "uid" : "fae57d61ae53c255",
-        "parentUid" : "36ef4e030cb9a983b73f31fb2bbb7f7c",
+        "uid" : "7dae1b0ffcce1601",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
         "status" : "passed",
         "time" : {
-          "start" : 1584695492400,
-          "stop" : 1584695511796,
-          "duration" : 19396
+          "start" : 1585072343081,
+          "stop" : 1585072356514,
+          "duration" : 13433
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
+        "uid" : "ba841ee2fd51d44",
+        "parentUid" : "a1a5662eb4773aa553b7ade4c8aaf861",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585072370954,
+          "stop" : 1585072375850,
+          "duration" : 4896
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "36ef4e030cb9a983b73f31fb2bbb7f7c"
+      "uid" : "a1a5662eb4773aa553b7ade4c8aaf861"
+    }, {
+      "name" : "9100@acer.TestNG-tests-1(14)",
+      "children" : [ {
+        "name" : "Переключение языка на английский",
+        "uid" : "1395c84330f5f4c1",
+        "parentUid" : "fd97c5832ef2bea5385f1fc56ad4ad26",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585072347109,
+          "stop" : 1585072359679,
+          "duration" : 12570
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Переключение языка на русский",
+        "uid" : "6f0d74601815db56",
+        "parentUid" : "fd97c5832ef2bea5385f1fc56ad4ad26",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585072359932,
+          "stop" : 1585072367968,
+          "duration" : 8036
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fd97c5832ef2bea5385f1fc56ad4ad26"
     } ],
     "uid" : "06de9290609f88c13854c863a3acf6b9"
   } ]

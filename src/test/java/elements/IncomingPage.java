@@ -40,11 +40,24 @@ public interface IncomingPage
     @FindBy("//span[contains(@class, 'button2__text')]/../../button[2]")
     ExtendedWebElement proveDeleting();
 
-
-    // проверка удаления писем
-
-    @Description("кол-во сообщений")
+    @Description("Кол-во сообщений")
     @FindBy("//span[@class='mail-NestedList-Item-Info-Link-Text']")
-    ExtendedWebElement quantityMessages();
+    ExtendedList<ExtendedWebElement> quantityMessages();
+
+    @Description("Отправитель")
+    @FindBy("//span[contains(@class, 'mail-MessageSnippet-FromText')]")
+    ExtendedList<ExtendedWebElement> from();
+
+    @Description("Дата")
+    @FindBy("//span[contains(@class, 'mail-MessageSnippet-Item_dateText')]")
+    ExtendedList<ExtendedWebElement> date();
+
+    @Description("Тема")
+    @FindBy("//span[contains(@class, 'message-snippet-subject')]/span[1]/span")
+    ExtendedList<ExtendedWebElement> theme();
+
+    @Description("Все чекбоксы")
+    @FindBy("//span/../..//label[@data-nb='checkbox']")
+    ExtendedList<ExtendedWebElement> allCheckboxes();
 
 }

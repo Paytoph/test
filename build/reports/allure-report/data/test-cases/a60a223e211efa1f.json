@@ -1,0 +1,149 @@
+{
+  "uid" : "a60a223e211efa1f",
+  "name" : "Отправка письма без указания адреса получателя и темы",
+  "fullName" : "Test1.sendTheMessage3",
+  "historyId" : "e3af6b38a99468352496ef697da4b970",
+  "time" : {
+    "start" : 1585072357320,
+    "stop" : 1585072360001,
+    "duration" : 2681
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585072309211,
+      "stop" : 1585072342829,
+      "duration" : 33618
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик на кнопку'написать'",
+      "time" : {
+        "start" : 1585072357320,
+        "stop" : 1585072359456,
+        "duration" : 2136
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Ввести в поле адреса 'кому' емэйл",
+      "time" : {
+        "start" : 1585072359456,
+        "stop" : 1585072359646,
+        "duration" : 190
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : ""
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Нажать на кнопку отправить",
+      "time" : {
+        "start" : 1585072359646,
+        "stop" : 1585072359769,
+        "duration" : 123
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Проверить, что появилась ошибка",
+      "time" : {
+        "start" : 1585072359769,
+        "stop" : 1585072360001,
+        "duration" : 232
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "error",
+        "value" : "CHECK_ERROR"
+      }, {
+        "name" : "email",
+        "value" : ""
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "sendTheMessage3"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с отправлением писем"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "9100@acer.TestNG-tests-3(16)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a60a223e211efa1f.json",
+  "parameterValues" : [ ]
+}

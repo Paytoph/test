@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3m20.15s</div>
+<div class="counter">1m21.87s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">90%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,69 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="activatingCheckboxes"></a>
+<h3 class="failures">activatingCheckboxes</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: not an empty iterable
+     but: was &lt;{name: Чекбокcы от меня}&gt;
+	at io.qameta.htmlelements.extension.ShouldMethod$Extension.handle(ShouldMethod.java:29)
+	at io.qameta.htmlelements.handler.WebBlockMethodHandler.lambda$invoke$2(WebBlockMethodHandler.java:65)
+	at io.qameta.htmlelements.statement.RetryStatement.lambda$apply$1(RetryStatement.java:60)
+	at io.qameta.htmlelements.statement.ListenerStatement.lambda$apply$3(ListenerStatement.java:37)
+	at io.qameta.htmlelements.handler.WebBlockMethodHandler.invoke(WebBlockMethodHandler.java:72)
+	at com.sun.proxy.$Proxy38.should(Unknown Source)
+	at io.qameta.htmlelements.element.ExtendedList.should(ExtendedList.java:62)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at io.qameta.htmlelements.extension.DefaultMethod$Extension.handle(DefaultMethod.java:29)
+	at io.qameta.htmlelements.handler.WebBlockMethodHandler.lambda$invoke$2(WebBlockMethodHandler.java:65)
+	at io.qameta.htmlelements.statement.RetryStatement.lambda$apply$1(RetryStatement.java:60)
+	at io.qameta.htmlelements.statement.ListenerStatement.lambda$apply$3(ListenerStatement.java:37)
+	at io.qameta.htmlelements.handler.WebBlockMethodHandler.invoke(WebBlockMethodHandler.java:72)
+	at com.sun.proxy.$Proxy38.should(Unknown Source)
+	at Test1.checkActivatingCheckboxes_aroundBody14(Test1.java:127)
+	at Test1$AjcClosure15.run(Test1.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at Test1.checkActivatingCheckboxes(Test1.java:126)
+	at Test1.activatingCheckboxes(Test1.java:216)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,73 +134,73 @@
 </tr>
 </thead>
 <tr>
-<td class="success">activatingCheckboxes</td>
-<td class="success">14.029s</td>
-<td class="success">passed</td>
+<td class="failures">activatingCheckboxes</td>
+<td class="failures">25.916s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">deletingThree</td>
-<td class="success">36.925s</td>
+<td class="success">0.820s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">deletingTwo</td>
-<td class="success">50.243s</td>
+<td class="success">2.431s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">languageEng</td>
-<td class="success">33.958s</td>
+<td class="success">12.572s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">languageRus</td>
-<td class="success">6.356s</td>
+<td class="success">8.037s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage</td>
-<td class="success">20.028s</td>
+<td class="success">13.570s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage3</td>
-<td class="success">6.740s</td>
+<td class="success">2.692s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage4</td>
-<td class="success">12.643s</td>
+<td class="success">2.953s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage5</td>
-<td class="success">5.615s</td>
+<td class="success">4.650s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage6</td>
-<td class="success">2.132s</td>
+<td class="success">3.335s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sendTheMessage7</td>
-<td class="success">11.476s</td>
+<td class="success">4.898s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>54048 [TestNG-tests-3] INFO Test1 - Сообщение успешно отправлено
-61199 [TestNG-tests-1] INFO Test1 - Язык успешно сменен на: Русский
-61404 [TestNG-tests-3] INFO Test1 - Адрес отсутствует
-74054 [TestNG-tests-3] INFO Test1 - Адрес отсутствует
-75497 [TestNG-tests-1] INFO Test1 - Язык успешно сменен на: English
-79672 [TestNG-tests-3] INFO Test1 - Сообщение успешно отправлено
-93292 [TestNG-tests-3] INFO Test1 - Некорректный адрес
-148526 [TestNG-tests-2] INFO Test1 - Письма удалились
+<pre>45029 [TestNG-tests-1] INFO Test1 - Язык успешно сменен на: Русский
+48518 [TestNG-tests-3] INFO Test1 - Сообщение успешно отправлено
+52051 [TestNG-tests-3] INFO Test1 - Адрес отсутствует
+53262 [TestNG-tests-1] INFO Test1 - Язык успешно сменен на: English
+55009 [TestNG-tests-3] INFO Test1 - Адрес отсутствует
+59661 [TestNG-tests-3] INFO Test1 - Сообщение успешно отправлено
+64290 [TestNG-tests-2] INFO Test1 - Проверка прошла успешно
+66727 [TestNG-tests-2] INFO Test1 - Проверка прошла успешно
 </pre>
 </span>
 </div>
@@ -156,7 +212,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.8.1</a> at 20.03.2020 14:13:26</p>
+<a href="http://www.gradle.org">Gradle 4.8.1</a> at 24.03.2020 22:52:56</p>
 </div>
 </div>
 </body>

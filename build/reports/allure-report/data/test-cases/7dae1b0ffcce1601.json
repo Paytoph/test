@@ -1,0 +1,158 @@
+{
+  "uid" : "7dae1b0ffcce1601",
+  "name" : "Отправка письма",
+  "fullName" : "Test1.sendTheMessage",
+  "historyId" : "4c807679ccf799a18f7625b770a88462",
+  "time" : {
+    "start" : 1585072343081,
+    "stop" : 1585072356514,
+    "duration" : 13433
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585072309211,
+      "stop" : 1585072342829,
+      "duration" : 33618
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик на кнопку'написать'",
+      "time" : {
+        "start" : 1585072343343,
+        "stop" : 1585072348039,
+        "duration" : 4696
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Ввести в поле адреса 'кому' емэйл",
+      "time" : {
+        "start" : 1585072348040,
+        "stop" : 1585072350951,
+        "duration" : 2911
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "djeeeelik@yandex.ru"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Ввести тему сообщения",
+      "time" : {
+        "start" : 1585072350951,
+        "stop" : 1585072351815,
+        "duration" : 864
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Нажать на кнопку отправить",
+      "time" : {
+        "start" : 1585072351815,
+        "stop" : 1585072352397,
+        "duration" : 582
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Проверить, что письмо отправилось",
+      "time" : {
+        "start" : 1585072352398,
+        "stop" : 1585072356468,
+        "duration" : 4070
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "sendTheMessage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с отправлением писем"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "9100@acer.TestNG-tests-3(16)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7dae1b0ffcce1601.json",
+  "parameterValues" : [ ]
+}
