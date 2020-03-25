@@ -5,133 +5,133 @@
     "name" : "Test1",
     "children" : [ {
       "name" : "sendTheMessage",
-      "uid" : "7dae1b0ffcce1601",
+      "uid" : "14927f9a5024406e",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1585072343081,
-        "stop" : 1585072356514,
-        "duration" : 13433
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "activatingCheckboxes",
-      "uid" : "30a14721aa067a9e",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "failed",
-      "time" : {
-        "start" : 1585072345500,
-        "stop" : 1585072371418,
-        "duration" : 25918
+        "start" : 1585156264020,
+        "stop" : 1585156280142,
+        "duration" : 16122
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "languageEng",
-      "uid" : "1395c84330f5f4c1",
+      "uid" : "afcbf858adbd7ef4",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1585072347109,
-        "stop" : 1585072359679,
-        "duration" : 12570
+        "start" : 1585156267065,
+        "stop" : 1585156282595,
+        "duration" : 15530
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
-      "name" : "sendTheMessage3",
-      "uid" : "a60a223e211efa1f",
+      "name" : "activatingCheckboxes",
+      "uid" : "34b2568347dfc92a",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1585072357320,
-        "stop" : 1585072360001,
-        "duration" : 2681
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "languageRus",
-      "uid" : "6f0d74601815db56",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585072359932,
-        "stop" : 1585072367968,
-        "duration" : 8036
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "sendTheMessage4",
-      "uid" : "58670960f1ef994b",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585072360007,
-        "stop" : 1585072362959,
-        "duration" : 2952
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "sendTheMessage5",
-      "uid" : "e84a72eaa2971b04",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585072362965,
-        "stop" : 1585072367612,
-        "duration" : 4647
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "sendTheMessage6",
-      "uid" : "82c6a7721d92a300",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585072367615,
-        "stop" : 1585072370949,
-        "duration" : 3334
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "sendTheMessage7",
-      "uid" : "ba841ee2fd51d44",
-      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1585072370954,
-        "stop" : 1585072375850,
-        "duration" : 4896
+        "start" : 1585156267794,
+        "stop" : 1585156270487,
+        "duration" : 2693
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "deletingThree",
-      "uid" : "55a6682018cd0bca",
+      "uid" : "334f530250606248",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1585072371424,
-        "stop" : 1585072372241,
-        "duration" : 817
+        "start" : 1585156271234,
+        "stop" : 1585156281450,
+        "duration" : 10216
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage3",
+      "uid" : "d32441fead6d1695",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156280288,
+        "stop" : 1585156285135,
+        "duration" : 4847
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "deletingTwo",
-      "uid" : "8b5ee73db8e07bbe",
+      "uid" : "e3f397cf622bc37a",
       "parentUid" : "3f665aeb01061fa685655f5a476b810c",
       "status" : "passed",
       "time" : {
-        "start" : 1585072372248,
-        "stop" : 1585072374677,
-        "duration" : 2429
+        "start" : 1585156281456,
+        "stop" : 1585156284575,
+        "duration" : 3119
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "languageRus",
+      "uid" : "4c61eb3d52822d7a",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156282599,
+        "stop" : 1585156289612,
+        "duration" : 7013
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage4",
+      "uid" : "eb5581a61dd7bfd6",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156285139,
+        "stop" : 1585156286685,
+        "duration" : 1546
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage5",
+      "uid" : "f53608b24b230b2c",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156287051,
+        "stop" : 1585156290786,
+        "duration" : 3735
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage6",
+      "uid" : "36e510509244ce62",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156290791,
+        "stop" : 1585156293162,
+        "duration" : 2371
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "sendTheMessage7",
+      "uid" : "af49bafc0f8a5dee",
+      "parentUid" : "3f665aeb01061fa685655f5a476b810c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585156293166,
+        "stop" : 1585156295415,
+        "duration" : 2249
       },
       "flaky" : false,
       "parameters" : [ ]

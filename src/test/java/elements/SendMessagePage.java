@@ -7,31 +7,21 @@ import io.qameta.htmlelements.element.ExtendedWebElement;
 public interface SendMessagePage
         extends ExtendedWebElement {
 
-
-    // Кнопка отправить
-
     @Description("кнопка отправить")
     @FindBy("//span[contains(@class, 'User')]/..//button")
     ExtendedWebElement sendMessageButton();
-
-    // Поле 'кому'
 
     @Description("поле 'кому'")
     @FindBy("//div[@name='to']")
     ExtendedWebElement sendingMessage();
 
-    // Поле с темой
-
     @Description(("поле с темой"))
     @FindBy("//input[contains(@name, 'subj')]")
     ExtendedWebElement messageTheme();
-
-    // Поле с ошибкой
 
     @Description("поле с ошибкой")
     @FindBy("//div[contains(@class, 'error')]")
     ExtendedWebElement errorField();
 
-    //
 
 }

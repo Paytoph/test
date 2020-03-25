@@ -1,0 +1,164 @@
+{
+  "uid" : "af49bafc0f8a5dee",
+  "name" : "Отправка письма с некорректным адресом получателя (содержащий @ @)",
+  "fullName" : "Test1.sendTheMessage7",
+  "historyId" : "ffe50a8a4f15f19e7300c069929224a7",
+  "time" : {
+    "start" : 1585156293166,
+    "stop" : 1585156295415,
+    "duration" : 2249
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585156236841,
+      "stop" : 1585156263817,
+      "duration" : 26976
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик на кнопку'написать'",
+      "time" : {
+        "start" : 1585156293167,
+        "stop" : 1585156293429,
+        "duration" : 262
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Ввести в поле адреса 'кому' емэйл",
+      "time" : {
+        "start" : 1585156293429,
+        "stop" : 1585156294715,
+        "duration" : 1286
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "djeeeelik@@yandex.ru"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Ввести тему сообщения",
+      "time" : {
+        "start" : 1585156294715,
+        "stop" : 1585156295029,
+        "duration" : 314
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Нажать на кнопку отправить",
+      "time" : {
+        "start" : 1585156295029,
+        "stop" : 1585156295190,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверить, что появилась ошибка",
+      "time" : {
+        "start" : 1585156295190,
+        "stop" : 1585156295415,
+        "duration" : 225
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "error",
+        "value" : "CHECK_ERROR_2"
+      }, {
+        "name" : "email",
+        "value" : "djeeeelik@@yandex.ru"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "sendTheMessage7"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с отправлением писем"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "1228@acer.TestNG-tests-3(16)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "af49bafc0f8a5dee.json",
+  "parameterValues" : [ ]
+}

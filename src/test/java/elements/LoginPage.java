@@ -6,19 +6,13 @@ import io.qameta.htmlelements.element.ExtendedWebElement;
 
 public interface LoginPage extends ExtendedWebElement {
 
-    // поле ввода логина
-
     @Description("Поле ввода логина")
     @FindBy("//input[@id='passp-field-login']")
     ExtendedWebElement loginField();
 
-    // поле ввода пароля
-
     @Description("Поле ввода пароля")
     @FindBy("//input[@id='passp-field-passwd']")
     ExtendedWebElement passwordField();
-
-    // Кнопка для входа в почту
 
     @Description("Кнопка для перехода в почту")
     @FindBy("//button[@type='submit']")

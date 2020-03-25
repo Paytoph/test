@@ -1,25 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "\nExpected: not an empty iterable\n     but: was <{name: Чекбокcы от меня}>",
-      "children" : [ {
-        "name" : "Выделение писем",
-        "uid" : "30a14721aa067a9e",
-        "parentUid" : "d45a8038c4ccb45e2c02c285af87e276",
-        "status" : "failed",
-        "time" : {
-          "start" : 1585072345500,
-          "stop" : 1585072371418,
-          "duration" : 25918
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d45a8038c4ccb45e2c02c285af87e276"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ]
+  "children" : [ ]
 }

@@ -1,0 +1,128 @@
+{
+  "uid" : "34b2568347dfc92a",
+  "name" : "Выделение писем",
+  "fullName" : "Test1.activatingCheckboxes",
+  "historyId" : "758b5586ee8becd4720207dd81c41fdb",
+  "time" : {
+    "start" : 1585156267794,
+    "stop" : 1585156270487,
+    "duration" : 2693
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585156236842,
+      "stop" : 1585156267790,
+      "duration" : 30948
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Активировать все чекбоксы",
+      "time" : {
+        "start" : 1585156269760,
+        "stop" : 1585156269950,
+        "duration" : 190
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "list",
+        "value" : "[Mes@4f1a827d]"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Проверка того,что письма удалились",
+      "time" : {
+        "start" : 1585156270469,
+        "stop" : 1585156270482,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9272c88c9ff3440",
+        "name" : "Проверка удаления писем",
+        "source" : "9272c88c9ff3440.txt",
+        "type" : "text/plain",
+        "size" : 27
+      } ],
+      "parameters" : [ {
+        "name" : "selected",
+        "value" : "[Mes@4f1a827d]"
+      }, {
+        "name" : "before",
+        "value" : "[Mes@68568666]"
+      }, {
+        "name" : "after",
+        "value" : "[Mes@1468a44a]"
+      } ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "activatingCheckboxes"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с входящими письмами"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "1228@acer.TestNG-tests-2(15)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "34b2568347dfc92a.json",
+  "parameterValues" : [ ]
+}

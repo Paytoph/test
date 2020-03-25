@@ -1,0 +1,51 @@
+{
+  "uuid": "11c3feb9-91a7-4b94-b594-771d74767c53",
+  "historyId": "49b501f39838aecc7551d2f7375503",
+  "fullName": "Test1.deletingOne",
+  "labels": [
+    {
+      "name": "package",
+      "value": "Test1"
+    },
+    {
+      "name": "testClass",
+      "value": "Test1"
+    },
+    {
+      "name": "testMethod",
+      "value": "deletingOne"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "untitled"
+    },
+    {
+      "name": "subSuite",
+      "value": "Test1"
+    },
+    {
+      "name": "host",
+      "value": "acer"
+    },
+    {
+      "name": "thread",
+      "value": "6520@acer.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "deletingOne",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1583599022048,
+  "stop": 1583599049685,
+  "parameters": []
+}

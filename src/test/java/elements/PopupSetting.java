@@ -7,8 +7,6 @@ import io.qameta.htmlelements.element.ExtendedWebElement;
 public interface PopupSetting
         extends ExtendedWebElement {
 
-    // Кнопка 'Все настройки' в всплывающем окне
-
     @Description("Кнопка 'Все настройки' в всплывающем окне")
     @FindBy("//span[@class='settings-popup-title-content']")
     ExtendedWebElement settingPopupButton();

@@ -3,12 +3,9 @@ import io.qameta.allure.Step;
 import io.qameta.htmlelements.WebPageFactory;
 import io.qameta.htmlelements.matcher.DisplayedMatcher;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -19,7 +16,6 @@ import pages.YandexMail;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import static io.qameta.htmlelements.matcher.HasTextMatcher.hasText;
@@ -27,7 +23,6 @@ import static io.qameta.htmlelements.matcher.HasTextMatcher.hasText;
 public class Test1 {
     private static final Logger logger = LoggerFactory.getLogger(Test1.class);
     ChromeDriver driver;
-    WebDriverWait wait;
     final WebPageFactory factory = new WebPageFactory();
     YandexMail ym;
     String email = "djeeeelik@yandex.ru";
@@ -40,7 +35,6 @@ public class Test1 {
         ym.getWrappedDriver().manage().window().maximize();
         ym.getWrappedDriver().get("https://mail.yandex.ru");
         Assert.assertEquals("Яндекс.Почта — бесплатная и надежная электронная почта", ym.getWrappedDriver().getTitle());
-        wait = new WebDriverWait(driver, 50);
         ym.startPage().startButton().click();
         ym.loginPage().loginField().sendKeys(email);
         ym.loginPage().loginMailButton().click();
@@ -121,12 +115,6 @@ public class Test1 {
         ym.lncomingPage().deleteButton().click();
     }
 
-    @Step("Проверка активированных чекбоксов")
-    public void checkActivatingCheckboxes() {
-        ym.lncomingPage().checkBoxes(email)
-                .should(Matchers.not(Matchers.emptyIterable()));
-    }
-
     @Step("Клик на кнопку'написать'")
     public void clickComposeButton() {
         ym.lncomingPage().composeButton().click();
@@ -154,13 +142,14 @@ public class Test1 {
     @Step("Проверить, что письмо отправилось")
     public void checkError() {
         ym.sendingMessageDone()
-                .waitUntil("Письмо отправилось", DisplayedMatcher.displayed(), 25);
+                .should("Письмо отправилось", DisplayedMatcher.displayed(), 25);
         logger.info("Сообщение успешно отправлено");
     }
 
     @Step("Проверить, что появилась ошибка")
     public void checkError2(Error error, String email) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
+        ym.sendMessagePage().errorField()
+                .should("ошибка не появилась", DisplayedMatcher.displayed(), 5);
         String message = driver.findElement(By.xpath("//div[contains(@class, 'error')]")).getText();
         switch (error) {
             case CHECK_ERROR:
@@ -194,8 +183,6 @@ public class Test1 {
     public void deletingTwo() {
         List<Mes> selected = allMessage();
         List<Mes> before = allMessage();
-        Random random = new Random();
-        random.nextInt(selected.size());
         activateCheckboxes(selected);
         clickDeleteMessageButton();
         ArrayList<Mes> after = allMessage();
@@ -213,7 +200,11 @@ public class Test1 {
 
     @Test(groups = "YA-4", description = ("Выделение писем"))
     public void activatingCheckboxes() {
-        checkActivatingCheckboxes();
+        List<Mes> selected = allMessage();
+        List<Mes> before = allMessage();
+        activateCheckboxes(selected);
+        ArrayList<Mes> after = allMessage();
+        deletingMessagesTestWithoutClick(selected, before, after);
     }
 
     @Test(groups = "YA-5", description = "Отправка письма")
@@ -269,7 +260,6 @@ public class Test1 {
         fillTheme();
         clickSendMessageButton();
         checkError2(Error.CHECK_ERROR_2, mail);
-
     }
 
     @Test(groups = "6.4.3", description = "Отправка письма с некорректным адресом получателя (без домена)")

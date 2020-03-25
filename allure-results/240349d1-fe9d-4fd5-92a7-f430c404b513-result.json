@@ -1,0 +1,51 @@
+{
+  "uuid": "240349d1-fe9d-4fd5-92a7-f430c404b513",
+  "historyId": "e3af6b38a99468352496ef697da4b970",
+  "fullName": "Test1.sendTheMessage3",
+  "labels": [
+    {
+      "name": "package",
+      "value": "Test1"
+    },
+    {
+      "name": "testClass",
+      "value": "Test1"
+    },
+    {
+      "name": "testMethod",
+      "value": "sendTheMessage3"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "untitled"
+    },
+    {
+      "name": "subSuite",
+      "value": "Test1"
+    },
+    {
+      "name": "host",
+      "value": "acer"
+    },
+    {
+      "name": "thread",
+      "value": "7676@acer.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "sendTheMessage3",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1583689174333,
+  "stop": 1583689175971,
+  "parameters": []
+}

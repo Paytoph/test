@@ -1,0 +1,143 @@
+{
+  "uid" : "e3f397cf622bc37a",
+  "name" : "Удаление выбранных писем",
+  "fullName" : "Test1.deletingTwo",
+  "historyId" : "44614513a3d68205508cdbc1a7e01e03",
+  "time" : {
+    "start" : 1585156281456,
+    "stop" : 1585156284575,
+    "duration" : 3119
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585156236842,
+      "stop" : 1585156267790,
+      "duration" : 30948
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Активировать все чекбоксы",
+      "time" : {
+        "start" : 1585156282731,
+        "stop" : 1585156282969,
+        "duration" : 238
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "list",
+        "value" : "[Mes@5a9c4995]"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Нажатие на кнопку удалить на верхней панели управления письмами",
+      "time" : {
+        "start" : 1585156282969,
+        "stop" : 1585156283313,
+        "duration" : 344
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка того,что письма удалились",
+      "time" : {
+        "start" : 1585156284574,
+        "stop" : 1585156284575,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "139a7ad1c2a2216d",
+        "name" : "Проверка удаления писем",
+        "source" : "139a7ad1c2a2216d.txt",
+        "type" : "text/plain",
+        "size" : 27
+      } ],
+      "parameters" : [ {
+        "name" : "selected",
+        "value" : "[Mes@5a9c4995]"
+      }, {
+        "name" : "before",
+        "value" : "[Mes@29651fc8]"
+      }, {
+        "name" : "after",
+        "value" : "[Mes@580506fb]"
+      } ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Test1"
+  }, {
+    "name" : "testClass",
+    "value" : "Test1"
+  }, {
+    "name" : "testMethod",
+    "value" : "deletingTwo"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тесты от Сергея"
+  }, {
+    "name" : "suite",
+    "value" : "Модуль работы с входящими письмами"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test1"
+  }, {
+    "name" : "host",
+    "value" : "acer"
+  }, {
+    "name" : "thread",
+    "value" : "1228@acer.TestNG-tests-2(15)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e3f397cf622bc37a.json",
+  "parameterValues" : [ ]
+}

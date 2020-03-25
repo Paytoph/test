@@ -1,0 +1,51 @@
+{
+  "uuid": "a0ceae82-4e2c-44f5-91d5-fe961cc5dd66",
+  "historyId": "add4640d6168dcb876c9248af76d7ab4",
+  "fullName": "Test1.deletingThree",
+  "labels": [
+    {
+      "name": "package",
+      "value": "Test1"
+    },
+    {
+      "name": "testClass",
+      "value": "Test1"
+    },
+    {
+      "name": "testMethod",
+      "value": "deletingThree"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "untitled"
+    },
+    {
+      "name": "subSuite",
+      "value": "Test1"
+    },
+    {
+      "name": "host",
+      "value": "acer"
+    },
+    {
+      "name": "thread",
+      "value": "4432@acer.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "deletingThree",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1583390063538,
+  "stop": 1583390063653,
+  "parameters": []
+}

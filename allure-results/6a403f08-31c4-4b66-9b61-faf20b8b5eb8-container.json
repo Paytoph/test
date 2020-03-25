@@ -1,0 +1,25 @@
+{
+  "uuid": "6a403f08-31c4-4b66-9b61-faf20b8b5eb8",
+  "name": "untitled",
+  "start": 1583481810420,
+  "stop": 1583481825835,
+  "children": [
+    "cef3a98e-f253-4e09-83ad-7bda04a375a9"
+  ],
+  "befores": [
+    {
+      "name": "firstTest",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "trace": "java.lang.NullPointerException\r\n\tat sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.safeInvokeTargetMethod(WebBlockMethodHandler.java:111)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.lambda$invoke$0(WebBlockMethodHandler.java:61)\r\n\tat io.qameta.htmlelements.statement.RetryStatement.lambda$apply$1(RetryStatement.java:60)\r\n\tat io.qameta.htmlelements.statement.ListenerStatement.lambda$apply$3(ListenerStatement.java:37)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.invoke(WebBlockMethodHandler.java:72)\r\n\tat com.sun.proxy.$Proxy16.findElement(Unknown Source)\r\n\tat io.qameta.htmlelements.annotation.FindBy$Extension.lambda$handle$1(FindBy.java:56)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.safeInvokeTargetMethod(WebBlockMethodHandler.java:107)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.lambda$invoke$0(WebBlockMethodHandler.java:61)\r\n\tat io.qameta.htmlelements.statement.RetryStatement.lambda$apply$1(RetryStatement.java:60)\r\n\tat io.qameta.htmlelements.statement.ListenerStatement.lambda$apply$3(ListenerStatement.java:37)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.invoke(WebBlockMethodHandler.java:72)\r\n\tat com.sun.proxy.$Proxy20.findElement(Unknown Source)\r\n\tat io.qameta.htmlelements.annotation.FindBy$Extension.lambda$handle$1(FindBy.java:56)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.safeInvokeTargetMethod(WebBlockMethodHandler.java:107)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.lambda$invoke$0(WebBlockMethodHandler.java:61)\r\n\tat io.qameta.htmlelements.statement.RetryStatement.lambda$apply$1(RetryStatement.java:60)\r\n\tat io.qameta.htmlelements.statement.ListenerStatement.lambda$apply$3(ListenerStatement.java:37)\r\n\tat io.qameta.htmlelements.handler.WebBlockMethodHandler.invoke(WebBlockMethodHandler.java:72)\r\n\tat com.sun.proxy.$Proxy21.click(Unknown Source)\r\n\tat Test1.firstTest(Test1.java:34)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)\r\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)\r\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)\r\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)\r\n\tat org.testng.TestRunner.beforeRun(TestRunner.java:529)\r\n\tat org.testng.TestRunner.run(TestRunner.java:497)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)\r\n"
+      },
+      "stage": "finished",
+      "description": "",
+      "start": 1583481810440,
+      "stop": 1583481825264
+    }
+  ]
+}

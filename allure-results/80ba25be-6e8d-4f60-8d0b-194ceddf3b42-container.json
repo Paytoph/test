@@ -1,0 +1,29 @@
+{
+  "uuid": "80ba25be-6e8d-4f60-8d0b-194ceddf3b42",
+  "name": "untitled",
+  "start": 1583599289962,
+  "stop": 1583599337476,
+  "children": [
+    "cb943eff-7fde-437c-b231-ee573c609348"
+  ],
+  "befores": [
+    {
+      "name": "firstTest",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "start": 1583599289985,
+      "stop": 1583599309513
+    }
+  ],
+  "afters": [
+    {
+      "name": "closeDriver",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "start": 1583599335379,
+      "stop": 1583599337475
+    }
+  ]
+}
